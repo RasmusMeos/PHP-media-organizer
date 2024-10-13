@@ -132,5 +132,60 @@ CREATE TABLE favorite_media (
 ```
 
 
+## Functional Requirements written as User stories ##
+
+User story, Wikipedia definition: 
+_"In software development and product management, a user story is an informal, natural language description of features of a software system. They are written from the perspective of an end user or user of a system, and may be recorded on index cards, Post-it notes, or digitally in specific management software."_
+
+In theory, we could obtain this information from a "hypothetical" client. 
+
+_We gather user stories through various user research methods such as interviews, questionnaires, observations, and others._ - Chisel Labs
+
+### User Account Management ###
+
+- **FR1:** As a user, I want to create an account so I can access the platform and organize my media.  
+- **FR2:** As a user, I want to log into my account securely so I can access my uploaded content.  
+- **FR3:** As a user, I want to log out from my account to keep my media safe when I'm done.
+
+### Media Upload & Management ###
+
+- **FR4:** As a user, I want to upload media to the platform to organize and store my content.  
+- **FR5:** As a user, I want the platform to automatically detect when my media files (e.g., photos) were taken and save this information.  
+- **FR6:** As a user, I want to view all my uploaded media in a gallery format on my homepage, so I can easily browse my collection.  
+- **FR7:** As a user, I want to delete media that I no longer need to keep my gallery clean and organized.  
+- **FR8:** As a user, I want to rename media after it is uploaded, giving it a more meaningful name.  
+- **FR9:** As a user, I want to view media files in fullscreen to better see the details.  
+- **FR10:** As a user, I want to filter media by date, name, or type (e.g., images, videos) to quickly find what I’m looking for.
+
+### Favorites ###
+
+- **FR11:** As a user, I want to mark media as "favorites" so that I can filter and easily access my favorite content.  
+- **FR12:** As a user, I want a "Favorites" section that automatically displays my favorited media without manually moving them.
+
+### Folders ###
+
+- **FR13:** As a user, I want to create folders to organize my media files into categories.  
+- **FR14:** As a user, I want to move media between folders to keep them better organized.  
+- **FR15:** As a user, I want to rename folders to better reflect their purpose.  
+- **FR16:** As a user, I want to delete folders I no longer need, with the option to either keep the media accessible or delete the media along with the folder.
+
+### Groups & Group Management ###
+
+- **FR17:** As a user, I want to create a shared space (group) for multiple users to contribute and view shared media in one place.  
+- **FR18:** As a group owner, I want to manage group membership by adding or removing members, and have control over all shared media.  
+- **FR19:** As a group member, I want to upload media to the group but only have the ability to delete media that I uploaded.  
+- **FR20:** As a group member, I want to invite others to join the group so we can collaborate.  
+- **FR21:** As a group owner or member, I want to be able to view all group-shared media in a dedicated section for better interaction.
+
+### Invitations ###
+
+- **FR22:** As a group owner, I want to invite other users to join the group, so they can access and contribute to the shared content.  
+- **FR23:** As a user, I want to accept or decline group invitations so I can decide which groups I want to participate in.
+
+### Optional/Future Features ###
+
+- **FR24:** As a user, I want to download media from the platform so that I can store it locally.  
+- **FR25:** As a user, I want to manage the privacy of my media, setting some files as "public" for others to view if I choose.
+
 
 
