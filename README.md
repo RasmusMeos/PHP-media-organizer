@@ -135,7 +135,6 @@ CREATE TABLE favorite_media (
 ## Functional Requirements written as User stories ##
 
 User story, Wikipedia definition:\
-
 _"In software development and product management, a user story is an informal, natural language description of features of a software system. They are written from the perspective of an end user or user of a system, and may be recorded on index cards, Post-it notes, or digitally in specific management software."_
 
 In theory, we could obtain this information from a "hypothetical" client. 
