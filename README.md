@@ -1,6 +1,7 @@
 # PHP-media-organizer #
 
-#### Document root: /.../PHP-media-organizer/public ####
+#### Document root: /path/to/apache/document/root/PHP-media-organizer/public ####
+The placeholder __/path/to/apache/document/root__ refers to __/opt/homebrew/var/www__ for example.
 
 ## Demo version database schema ## 
 ```sql
@@ -74,4 +75,62 @@ CREATE TABLE media (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 ```
+
+### 3. Folders Table ###
+This table allows users to organize their media into folders (can also be referred to as 'groups').
+```sql
+CREATE TABLE folders (
+    folder_id SERIAL PRIMARY KEY,
+    folder_name VARCHAR(255) NOT NULL,
+    folder_description TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 4. Invitations Table ###
+This table tracks group invitations sent between users for shared folders.
+```sql
+CREATE TABLE invitations (
+    invite_id SERIAL PRIMARY KEY,
+    folder_id INT REFERENCES folders(folder_id) ON DELETE CASCADE,
+    invited_user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
+    sender_user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
+    status VARCHAR(50) NOT NULL DEFAULT 'pending',
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 5. Media Ownership Table ###
+This linking table tracks ownership of media by users.
+
+```sql
+CREATE TABLE media_users (
+    media_id INT REFERENCES media(media_id) ON DELETE CASCADE,
+    user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
+    PRIMARY KEY (media_id, user_id)
+);
+```
+
+### 6. Folder Media Table ###
+This linking table connects media with folders.
+```sql
+CREATE TABLE folder_media (
+    folder_id INT REFERENCES folders(folder_id) ON DELETE CASCADE,
+    media_id INT REFERENCES media(media_id) ON DELETE CASCADE,
+    PRIMARY KEY (folder_id, media_id)
+);
+```
+
+### 7. Favorites Table ###
+This table tracks the media that users have marked as favorites.
+```sql
+CREATE TABLE favorite_media (
+    user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
+    media_id INT REFERENCES media(media_id) ON DELETE CASCADE,
+    PRIMARY KEY (user_id, media_id)
+);
+```
+
+
+
 
