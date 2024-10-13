@@ -40,6 +40,38 @@ CREATE TABLE folder_images (
     FOREIGN KEY (folder_id) REFERENCES folders(folder_id) ON DELETE CASCADE,
     FOREIGN KEY (image_id) REFERENCES images(image_id) ON DELETE CASCADE
 );
-``
+```
 
+
+## Proposed final version database schema ## 
+
+### 1. Users Table ###
+This table stores information about users.
+```sql
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    user_name VARCHAR(255) NOT NULL DEFAULT '', -- Visible name, default equals username
+    email VARCHAR(255) NOT NULL UNIQUE,
+    pwd VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 2. Media Table ###
+This table stores media files (images, videos, etc.).
+```sql
+CREATE TABLE media (
+    media_id SERIAL PRIMARY KEY,
+    media_name VARCHAR(255) NOT NULL,
+    mime_type VARCHAR(50) NOT NULL,
+    file_size BIGINT NOT NULL,
+    taken_date TIMESTAMP,
+    upload_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    file_path VARCHAR(255) NOT NULL,
+    download_url VARCHAR(255), -- for future drag-and-drop functionality
+    media_description TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
 
