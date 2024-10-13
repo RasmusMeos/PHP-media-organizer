@@ -1,7 +1,7 @@
 # PHP-media-organizer #
 
-#### Document root: /path/to/apache/document/root/PHP-media-organizer/public ####
-The placeholder __/path/to/apache/document/root__ refers to __/opt/homebrew/var/www__ for example.
+### Document root: _/path/to/apache/document/root/PHP-media-organizer/public_ ###
+The placeholder _/path/to/apache/document/root_ refers to _/opt/homebrew/var/www_ for example.
 
 ## Demo version database schema ## 
 ```sql
