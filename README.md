@@ -104,7 +104,7 @@ CREATE TABLE invitations (
 This linking table tracks ownership of media by users.
 
 ```sql
-CREATE TABLE media_users (
+CREATE TABLE users_media (
     media_id INT REFERENCES media(media_id) ON DELETE CASCADE,
     user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
     PRIMARY KEY (media_id, user_id)
