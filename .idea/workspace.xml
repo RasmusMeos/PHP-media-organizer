@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PHP-media-organizer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/ChangePwdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/ChangePwdController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/FolderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folder/FolderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Media/ImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/SignupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/SignupController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Media/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Core/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/change_pwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/change_pwd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/create_folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/create_folder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/favorites.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favorites.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/image_display_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/image_display_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/login_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/main_gallery_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main_gallery_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/manage_folders.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/manage_folders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/signup_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/signup_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/upload_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/upload_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/image_gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/image_gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/fullscreen.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/fullscreen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/pencil.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/pencil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/star-filled.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/star-filled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/star.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/star.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/trash.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/trash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2kyvgoCNKaEJuYT0GIPIEp4f7oC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/app/Controllers/Folder" />
+      <recent name="$PROJECT_DIR$/app/Controllers/Auth" />
+      <recent name="$PROJECT_DIR$/app/Controllers/Media" />
+      <recent name="$PROJECT_DIR$/public/icons" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SignupController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/app/Controllers/SignupController.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="" />
+      <created>1724268744643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724268744643</updated>
+      <workItem from="1724268745691" duration="16958000" />
+      <workItem from="1724335461564" duration="6565000" />
+      <workItem from="1724409836977" duration="12862000" />
+      <workItem from="1724424953451" duration="3900000" />
+      <workItem from="1724432481431" duration="6415000" />
+      <workItem from="1728218454754" duration="1964000" />
+      <workItem from="1728744783631" duration="13861000" />
+      <workItem from="1728781477267" duration="657000" />
+      <workItem from="1728863587342" duration="115000" />
+      <workItem from="1728863711472" duration="213000" />
+      <workItem from="1728863942942" duration="154000" />
+      <workItem from="1728864100525" duration="52000" />
+      <workItem from="1728864179191" duration="990000" />
+      <workItem from="1729694740747" duration="4112000" />
+      <workItem from="1729708780853" duration="3612000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -20,7 +20,7 @@ if($is_logged_in) {
 
 }
 
-require_once '../app/Views/main_gallery_view.php';
+require_once '../app/views/main_gallery_view.php';
 
 
 

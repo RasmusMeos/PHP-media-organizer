@@ -4,7 +4,7 @@ require_once '../config/session.php';
 $config = require_once '../config/config.php';
 
 require_once '../app/Core/Database.php';
-require_once '../app/Controllers/LoginController.php';
+require_once '../app/Controllers/Auth/LoginController.php';
 require_once '../app/Managers/UserManager.php';
 require_once '../app/Models/User.php';
 
@@ -22,4 +22,4 @@ if ($errors) {
   exit();
 }
 
-require_once '../app/Views/login_view.php';
+require_once '../app/views/login_view.php';

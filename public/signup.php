@@ -27,4 +27,4 @@ if ($errors) {
   exit();
 }
 
-require_once '../app/Views/signup_view.php';
+require_once '../app/views/signup_view.php';

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - PHP Image Organizer</title>
-  <link rel="stylesheet" href="/css/homepage.css">
-  <link rel="stylesheet" href="/css/image_gallery.css">
+  <title>Home - PHP Media Organizer</title>
+  <link rel="stylesheet" href="/assets/css/homepage.css">
+  <link rel="stylesheet" href="/assets/css/image_gallery.css">
 </head>
 <body>
 <header>
@@ -26,7 +26,7 @@
 
 <main>
   <?php if (!$is_logged_in): ?>
-    <h1>Welcome to PHP Image Organizer</h1>
+    <h1>Welcome to PHP Media Organizer</h1>
     <h3>Organize your images with ease!</h3>
     <p><a href="signup.php">Get started by signing up</a></p>
   <?php else: ?>
@@ -36,7 +36,7 @@
     <!-- looping through and displaying images -->
     <?php if (!empty($images)): ?>
       <?php foreach ($images as $image): ?>
-        <?php include '../app/Views/image_display_view.php'; ?>
+        <?php include '../app/views/image_display_view.php'; ?>
       <?php endforeach; ?>
     <?php else: ?>
       <p>You haven't uploaded any images yet.</p>

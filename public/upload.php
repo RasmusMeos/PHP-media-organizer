@@ -4,7 +4,7 @@ require_once '../config/session.php';
 $config = require_once '../config/config.php';
 
 require_once '../app/Core/Database.php';
-require_once '../app/Controllers/UploadController.php';
+require_once '../app/Controllers/Media/UploadController.php';
 require_once '../app/Managers/ImageManager.php';
 require_once '../app/Models/Image.php';
 
@@ -23,5 +23,5 @@ if ($errors) {
 }
 
 // Render the upload view
-require_once '../app/Views/upload_view.php';
+require_once '../app/views/upload_view.php';
 
