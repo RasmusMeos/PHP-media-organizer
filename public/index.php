@@ -1,21 +1,21 @@
 <?php
 
 require_once '../config/session.php';
+require_once '../app/core/Autoloader.php';
+require_once '../app/core/pathHelper.php';
 $config = require_once '../config/config.php';
 
-require_once '../app/Core/Database.php';
-require_once '../app/Managers/ImageManager.php';
-require_once '../app/Models/Image.php';
+App\Core\Autoloader::loadClass();
 
-$db = new Database($config['db']);
+$db = new App\Core\Database($config['db']);
 $is_logged_in = isset($_SESSION['user_id']);
 
 
 
 $images = [];
 if($is_logged_in) {
-  $imageModel = new Image($db);
-  $imageManager = new ImageManager($imageModel);
+  $imageModel = new App\Models\Image($db);
+  $imageManager = new App\Managers\ImageManager($imageModel);
   $images = $imageManager->getImagesByUserID($_SESSION['user_id']);
 
 }
@@ -24,7 +24,7 @@ require_once '../app/views/main_gallery_view.php';
 
 
 
-echo __DIR__ . "\n" . dirname(__FILE__);
+echo __DIR__ . "<br>" . dirname(__FILE__);
 
 
 

@@ -1,13 +1,14 @@
 <?php
 
-require_once '../app/Managers/ImageManager.php';
+namespace App\Controllers\Media;
 
-class UploadController
+use \App\Core\BaseController;
+class UploadImage extends BaseController
 {
   private $imageManager;
   private $errors = [];
 
-  public function __construct(ImageManager $imageManager)
+  public function __construct(\App\Managers\ImageManager $imageManager)
   {
     $this->imageManager = $imageManager;
   }

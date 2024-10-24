@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Models;
 class Image
 {
 
@@ -30,7 +31,7 @@ class Image
     $stmt = $this->db->prepare($query);
     $stmt->bindParam(':user_id', $userID);
     $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
   }
 
 

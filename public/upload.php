@@ -2,17 +2,17 @@
 
 require_once '../config/session.php';
 $config = require_once '../config/config.php';
+require_once '../app/core/Autoloader.php';
+require_once '../app/core/pathHelper.php';
 
-require_once '../app/Core/Database.php';
-require_once '../app/Controllers/Media/UploadController.php';
-require_once '../app/Managers/ImageManager.php';
-require_once '../app/Models/Image.php';
+App\Core\Autoloader::loadClass();
 
-$db = new Database($config['db']);
 
-$imageModel = new Image($db);
-$imageManager = new ImageManager($imageModel);
-$uploadController = new UploadController($imageManager);
+$db = new App\Core\Database($config['db']);
+
+$imageModel = new App\Models\Image($db);
+$imageManager = new App\Managers\ImageManager($imageModel);
+$uploadController = new App\Controllers\Media\UploadImage($imageManager);
 
 $errors = $uploadController->upload();
 

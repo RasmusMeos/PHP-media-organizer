@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class User
 {
   private $db;
@@ -24,7 +26,7 @@ public function findByEmail($email)
   $stmt = $this->db->prepare($query);
   $stmt->bindParam(':email', $email);
   $stmt->execute();
-  return $stmt->fetch(PDO::FETCH_ASSOC);
+  return $stmt->fetch(\PDO::FETCH_ASSOC);
 }
 
   public function findByUsername($username)
@@ -33,7 +35,7 @@ public function findByEmail($email)
     $stmt = $this->db->prepare($query);
     $stmt->bindParam(':username', $username);
     $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
   }
 
 public function getLastInsertedID() {

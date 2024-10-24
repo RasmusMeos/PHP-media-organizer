@@ -6,8 +6,8 @@ $config = require '../config/config.php';
 
 
 
-require_once '../app/Core/Database.php';
-require_once '../app/Controllers/SignupController.php';
+require_once '../app/core/Database.php';
+require_once '../app/Controllers/Signup.php';
 require_once '../app/Managers/UserManager.php';
 require_once '../app/Models/User.php';
 

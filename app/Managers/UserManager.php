@@ -1,13 +1,13 @@
 <?php
 
-require_once '../app/Models/User.php';
+namespace App\Managers;
 
 class UserManager
 {
 
   private $userModel;
 
-  public function __construct(User $userModel)
+  public function __construct( $userModel)
   {
     $this->userModel = $userModel;
   }

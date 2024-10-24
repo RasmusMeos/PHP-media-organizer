@@ -1,14 +1,15 @@
 <?php
 
-require_once '../app/Managers/UserManager.php';
+namespace App\Controllers\Auth;
 
-class SignupController
+use App\Core\BaseController;
+class Signup extends BaseController
 {
 
   private $userManager;
   private $errors = [];
 
-  public function __construct(UserManager $userManager)
+  public function __construct(\UserManager $userManager)
   {
     $this->userManager = $userManager;
   }

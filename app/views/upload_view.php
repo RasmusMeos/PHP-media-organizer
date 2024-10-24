@@ -20,6 +20,7 @@
 <main>
   <h1>Upload Image</h1>
 
+
   <?php
   function checkUploadErrors()
   {

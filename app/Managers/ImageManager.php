@@ -1,11 +1,12 @@
 <?php
 
-require_once '../app/Models/Image.php';
+namespace App\Managers;
+
  class ImageManager
  {
    private $imageModel;
 
-   public function __construct(Image $imageModel)
+   public function __construct(\App\Models\Image $imageModel)
    {
      $this->imageModel = $imageModel;
    }
