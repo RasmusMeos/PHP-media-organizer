@@ -9,7 +9,7 @@ class Signup extends BaseController
   private $userManager;
   private $errors = [];
 
-  public function __construct(\UserManager $userManager)
+  public function __construct(\App\Managers\UserManager $userManager)
   {
     $this->userManager = $userManager;
   }

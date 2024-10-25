@@ -5,6 +5,7 @@ require_once '../app/core/Autoloader.php';
 require_once '../app/core/pathHelper.php';
 $config = require_once '../config/config.php';
 
+
 App\Core\Autoloader::loadClass();
 
 $db = new App\Core\Database($config['db']);
@@ -20,11 +21,11 @@ if($is_logged_in) {
 
 }
 
-require_once '../app/views/main_gallery_view.php';
+require_once '../app/views/main_gallery.php';
 
 
 
-echo __DIR__ . "<br>" . dirname(__FILE__);
+echo __DIR__ . "<br>" ;
 
 
 

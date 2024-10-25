@@ -8,6 +8,7 @@ require_once '../app/core/BaseController.php';
 require_once '../app/Controllers/Auth/Login.php';
 require_once '../app/Managers/UserManager.php';
 require_once '../app/Models/User.php';
+require_once '../app/Managers/UserManager.php';
 
 $db = new App\Core\Database($config['db']);
 

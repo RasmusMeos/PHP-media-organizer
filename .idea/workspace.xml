@@ -5,26 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/main_gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/ChangePwdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/ChangePwd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/SignupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Media/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Media/UploadImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Autoloader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Managers/ImageManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Managers/ImageManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Managers/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Managers/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/image_display_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/image_display.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/login_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main_gallery_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/signup_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/signup_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/upload_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/upload_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/upload.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/partials" />
       <recent name="$PROJECT_DIR$/app/Core" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/app/Controllers/Folder" />
       <recent name="$PROJECT_DIR$/app/Controllers/Auth" />
-      <recent name="$PROJECT_DIR$/app/Controllers/Media" />
     </key>
   </component>
   <component name="RunManager">
@@ -107,7 +99,8 @@
       <workItem from="1728864100525" duration="52000" />
       <workItem from="1728864179191" duration="990000" />
       <workItem from="1729694740747" duration="4112000" />
-      <workItem from="1729708780853" duration="18775000" />
+      <workItem from="1729708780853" duration="20018000" />
+      <workItem from="1729874030669" duration="6034000" />
     </task>
     <servers />
   </component>

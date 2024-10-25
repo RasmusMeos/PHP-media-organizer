@@ -29,3 +29,4 @@ function regenerateSessionID() {
   $_SESSION["last_regeneration"] = time();
 }
 
+$is_logged_in = isset($_SESSION['user_id']);
