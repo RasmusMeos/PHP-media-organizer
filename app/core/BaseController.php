@@ -7,19 +7,13 @@ class BaseController {
 
     extract($data);
 
-    $viewPath = __DIR__ . "/../app/views/" . $view . ".php";
-
-    //Header partial
-    include __DIR__ . "/../app/views/partials/header.php";
+    $viewPath = base_path("app/views/{$view}.php");
 
     if (file_exists($viewPath)) {
       include $viewPath;
     } else {
       echo "<p>View {$view} not found.</p>";
     }
-
-    //Footer partial
-    include __DIR__ . "/../app/views/partials/footer.php";
 
   }
 

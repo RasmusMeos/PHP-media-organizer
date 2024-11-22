@@ -1,31 +1,27 @@
 <?php
 
-require_once '../config/session.php';
-require_once '../app/core/Autoloader.php';
 require_once '../app/core/pathHelper.php';
-$config = require_once '../config/config.php';
+require_once base_path('config/session.php');
+require_once base_path('/app/core/Autoloader.php');
 
+use App\Core\Router;
 
+// loading the autoloader
 App\Core\Autoloader::loadClass();
 
-$db = new App\Core\Database($config['db']);
-$is_logged_in = isset($_SESSION['user_id']);
+$router = new Router();
+
+// loading the routes -> this populates `$routes` array of the Router $router
+require base_path('app/core/routes.php');
+
+// extracting the current URI and method
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
+
+// routing the request
+$router->route($uri, $method);
 
 
-
-$images = [];
-if($is_logged_in) {
-  $imageModel = new App\Models\Image($db);
-  $imageManager = new App\Managers\ImageManager($imageModel);
-  $images = $imageManager->getImagesByUserID($_SESSION['user_id']);
-
-}
-
-require_once '../app/views/main_gallery.php';
-
-
-
-echo __DIR__ . "<br>" ;
 
 
 

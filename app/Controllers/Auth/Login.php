@@ -3,6 +3,7 @@
 namespace App\Controllers\Auth;
 
 use App\Core\BaseController;
+use App\Managers\UserManager;
 
 class Login extends BaseController {
 
@@ -10,9 +11,15 @@ class Login extends BaseController {
   private $errors = [];
 
 
-  public function __construct(\App\Managers\UserManager $userManager)
+  public function __construct(UserManager $userManager)
   {
     $this->userManager = $userManager;
+  }
+
+  public function displayLoginForm() {
+      $data = ['errors' => $_SESSION['errors_login'] ?? []];
+      unset($_SESSION['errors_login']);
+      $this->render('auth/login', $data);
   }
 
   public function login() {
@@ -29,17 +36,19 @@ class Login extends BaseController {
         if ($user && password_verify($password, $user['pwd'])) {
           $_SESSION['user_id'] = $user['user_id'];
           $_SESSION['username'] = $user['username'];
-          header('Location: /index.php');
-          exit();
+          $this->redirect("/");
         } else {
           $this->errors['invalid_credentials'] = 'Vale kasutajanimi või parool.';
         }
       }
 
-      return $this->errors;
+      if (!empty($this->errors)) {
+        $_SESSION['errors_login'] = $this->errors;
+        $this->redirect("/login");
+      }
     }
-
-    return null;
+    // If not POST request:
+    $this->redirect("/login");
   }
 
 }

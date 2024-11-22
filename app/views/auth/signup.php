@@ -1,11 +1,10 @@
 <?php
 $title = "Signup - PHP Media Organizer";
-require_once '../app/core/pathHelper.php';
-include base_path() . "/app/views/partials/header.php";
-include base_path() . "/app/views/partials/topnav.php";
-include base_path() . "/app/views/partials/error_messages.php";
+include base_path("app/views/partials/header.php");
+include base_path("app/views/partials/topnav.php");
+include base_path("app/views/partials/error_messages.php");
 
-checkSignupErrors();
+displayErrors($errors);
 ?>
 
 <main>
@@ -13,7 +12,7 @@ checkSignupErrors();
 
 
 
-  <form action="/signup.php" method="POST">
+  <form action="/signup" method="POST">
     <label for="username">Kasutajanimi:</label>
     <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($_POST['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
 
@@ -27,4 +26,4 @@ checkSignupErrors();
   </form>
 </main>
 
-<?php include base_path() . "/app/views/partials/footer.php"; ?>
+<?php include base_path("app/views/partials/footer.php"); ?>

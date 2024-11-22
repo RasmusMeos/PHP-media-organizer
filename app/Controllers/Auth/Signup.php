@@ -14,6 +14,12 @@ class Signup extends BaseController
     $this->userManager = $userManager;
   }
 
+  public function displaySignupForm() {
+    $data = ['errors' => $_SESSION['errors_signup'] ?? []];
+    unset($_SESSION['errors_signup']);
+    $this->render('auth/signup', $data);
+  }
+
   public function signup()
   {
     $this->errors = [];
@@ -54,14 +60,16 @@ class Signup extends BaseController
           $_SESSION['user_id'] = $this->userManager->getLastRegisteredUserID();
           $_SESSION['username'] = $username;
 
-          header('Location: /index.php');
-          exit();
+          $this->redirect('/');
         } else {
           $this->errors['registration_failed'] = 'Registreerimine ebaõnnestus. Proovige uuesti.';
         }
       }
-      return $this->errors;
+      if (!empty($this->errors)) {
+        $_SESSION['errors_signup'] = $this->errors;
+        $this->redirect("/signup");
+      }
     }
-    return null;
+    $this->redirect('/');
   }
 }

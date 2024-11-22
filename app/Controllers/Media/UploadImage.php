@@ -13,6 +13,12 @@ class UploadImage extends BaseController
     $this->imageManager = $imageManager;
   }
 
+  public function displayUploadForm() {
+    $data = ['errors' => $_SESSION['errors_upload'] ?? []];
+    unset($_SESSION['errors_upload']);
+    $this->render('media/upload_form', $data);
+  }
+
   public function upload()
   {
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
@@ -36,15 +42,16 @@ class UploadImage extends BaseController
           if ($result !== true) {
             $this->errors['upload_failed'] = 'Pildi üleslaadimine ebaõnnestus. Palun proovi uuesti.';
           } else {
-            header('Location: /index.php');
-            exit();
+            $this->redirect('/');
           }
         }
       }
 
-      return $this->errors;
+      if (!empty($this->errors)) {
+        $_SESSION['errors_upload'] = $this->errors;
+        $this->redirect('/upload');
+      }
     }
-
-    return null;
+    $this->redirect('/upload'); //not POST request
   }
 }

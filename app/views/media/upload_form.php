@@ -1,11 +1,10 @@
 <?php
 $title = "Upload - PHP Media Organizer";
-require_once '../app/core/pathHelper.php';
-include base_path() . "/app/views/partials/header.php";
-include base_path() . "/app/views/partials/topnav.php";
-include base_path() . "/app/views/partials/error_messages.php";
+include base_path('app/views/partials/header.php');
+include base_path('app/views/partials/topnav.php');
+include base_path("app/views/partials/error_messages.php");
 
-checkUploadErrors();
+displayErrors($errors);
 ?>
 
 <main>
@@ -18,5 +17,5 @@ checkUploadErrors();
   </form>
 </main>
 
-<?php include base_path() . "/app/views/partials/footer.php"; ?>
+<?php include base_path('app/views/partials/footer.php'); ?>
 
