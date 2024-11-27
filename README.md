@@ -186,6 +186,7 @@ _"We gather user stories through various user research methods such as interview
 
 - **FR24:** As a user, I want to download media from the platform so that I can store it locally.
 - **FR25:** As a user, I want to manage the privacy of my media, setting some files as "public" for others to view if I choose.
+- **FR26:** As a user, I want to upload multiple media, so I can transfer large quantities of files at once.
 
 
 
