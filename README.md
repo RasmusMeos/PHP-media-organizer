@@ -188,6 +188,7 @@ _"We gather user stories through various user research methods such as interview
 - **FR25:** As a user, I want to manage the privacy of my media, setting some files as "public" for others to view if I choose.
 - **FR26:** As a user, I want to upload multiple media, so I can transfer large quantities of files at once.
 - **FR27:** As a user, I want to be able change the language of the app, so I can better understand its contents.
+- **FR28:** As a user, I want to change my on-screen name, so others can recognize me better.
 
 
 
