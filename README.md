@@ -67,11 +67,10 @@ CREATE TABLE media (
     media_name VARCHAR(255) NOT NULL,
     mime_type VARCHAR(50) NOT NULL,
     file_size BIGINT NOT NULL,
-    taken_date TIMESTAMP,
-    upload_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     file_path VARCHAR(255) NOT NULL,
     download_url VARCHAR(255), -- for future drag-and-drop functionality
     media_description TEXT,
+    taken_date TIMESTAMP,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 ```
