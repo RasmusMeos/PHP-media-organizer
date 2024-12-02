@@ -1,1 +1,3 @@
-uploads/images
+uploads/images/*
+!uploads/images/.gitkeep
+
