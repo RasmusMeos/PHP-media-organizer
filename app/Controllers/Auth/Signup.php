@@ -6,12 +6,12 @@ use App\Core\BaseController;
 class Signup extends BaseController
 {
 
-  private $userManager;
+  private $userModel;
   private $errors = [];
 
-  public function __construct(\App\Managers\UserManager $userManager)
+  public function __construct(\App\Models\Table\Users $userModel)
   {
-    $this->userManager = $userManager;
+    $this->userModel = $userModel;
   }
 
   public function displaySignupForm() {
@@ -45,19 +45,20 @@ class Signup extends BaseController
       }
 
       if (empty($this->errors)) {
-        if ($this->userManager->verifyUsernameExists($username)) {
+        if ($this->userModel->findByUsername($username)) {
           $this->errors['username_taken'] = 'Kasutajanimi juba eksisteerib';
         }
-        if ($this->userManager->verifyEmailExists($email)) {
+        if ($this->userModel->findByEmail($email)) {
           $this->errors['email_in_use'] = 'E-mail juba kasutusel';
         }
       }
 
       if (empty($this->errors)) {
-        $result = $this->userManager->register($username, $email, $pwd);
-        if ($result === true) {
+        $hashedPassword = password_hash($pwd, PASSWORD_BCRYPT);
+        $result = $this->userModel->createUser($username, $email, $hashedPassword);
 
-          $_SESSION['user_id'] = $this->userManager->getLastRegisteredUserID();
+        if ($result) {
+          $_SESSION['user_id'] = $this->userModel->getLastInsertedUserId();
           $_SESSION['username'] = $username;
 
           $this->redirect('/');

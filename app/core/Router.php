@@ -2,11 +2,15 @@
 
 namespace App\Core;
 
+use App\Models\Table\Media;
+use App\Models\Table\Users;
+use App\Models\Table\UsersMedia;
+
 class Router
 {
   private $routes = [];
 
-  public function add($method, $uri, $controller)
+  private function add($method, $uri, $controller)
   {
     $this->routes[] = [
       'uri' => $uri,
@@ -58,23 +62,21 @@ class Router
     if ($class === 'App\Controllers\Auth\Login') {
       $config = require base_path('config/config.php');
       $db = new Database($config['db']);
-      $userModel = new \App\Models\User($db);
-      $userManager = new \App\Managers\UserManager($userModel);
-      return new $class($userManager);
+      $userModel = new Users($db);
+      return new $class($userModel);
     }
     if ($class === 'App\Controllers\Auth\Signup') {
       $config = require base_path('config/config.php');
-      $db = new \App\Core\Database($config['db']);
-      $userModel = new \App\Models\User($db);
-      $userManager = new \App\Managers\UserManager($userModel);
-      return new $class($userManager);
+      $db = new Database($config['db']);
+      $userModel = new Users($db);
+      return new $class($userModel);
     }
     if ($class === 'App\Controllers\Media\UploadImage') {
       $config = require base_path('config/config.php');
       $db = new Database($config['db']);
-      $imageModel = new \App\Models\Image($db);
-      $imageManager = new \App\Managers\ImageManager($imageModel);
-      return new $class($imageManager);
+      $mediaModel = new Media($db);
+      $usersMediaModel = new UsersMedia($db);
+      return new $class($mediaModel, $usersMediaModel);
     }
     return new $class();
   }

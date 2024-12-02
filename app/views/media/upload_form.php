@@ -10,7 +10,7 @@ displayErrors($errors);
 <main>
   <h1>Upload Image</h1>
 
-  <form action="/upload.php" method="POST" enctype="multipart/form-data">
+  <form action="/upload" method="POST" enctype="multipart/form-data">
     <label for="image">Vali pilt, mida üles laadida:</label>
     <input type="file" id="image" name="image" accept="image/*" >
     <button type="submit">Upload</button>

@@ -1,10 +1,6 @@
 <?php
 
-namespace App\Core;
-
-class Autoloader {
-
-  public static function loadClass() {
+   function loadClass() {
     spl_autoload_register(function ($class) {
       $classPath = str_replace('\\', DIRECTORY_SEPARATOR, $class);
       echo "Class name: " . $classPath ."<br>";
@@ -19,4 +15,4 @@ class Autoloader {
     });
   }
 
-}
+
