@@ -4,16 +4,17 @@ namespace App\Controllers\Auth;
 
 use App\Core\BaseController;
 use App\Managers\UserManager;
+use app\Models\Table\Users;
 
 class Login extends BaseController {
 
-  private $userManager;
+  private $userModel;
   private $errors = [];
 
 
-  public function __construct(UserManager $userManager)
+  public function __construct(Users $userModel)
   {
-    $this->userManager = $userManager;
+    $this->userModel = $userModel;
   }
 
   public function displayLoginForm() {
@@ -31,7 +32,7 @@ class Login extends BaseController {
       if (empty($username) || empty($password)) {
         $this->errors['empty_fields'] = 'Kõik väljad peavad olema täidetud.';
       } else {
-        $user = $this->userManager->verifyUsernameExists($username);
+        $user = $this->userModel->findByUsername($username);
 
         if ($user && password_verify($password, $user['pwd'])) {
           $_SESSION['user_id'] = $user['user_id'];

@@ -2,12 +2,12 @@
 
 require_once '../app/core/pathHelper.php';
 require_once base_path('config/session.php');
-require_once base_path('/app/core/Autoloader.php');
+require_once base_path('/app/core/autoloader.php');
 
 use App\Core\Router;
 
 // loading the autoloader
-App\Core\Autoloader::loadClass();
+loadClass();
 
 $router = new Router();
 
@@ -20,14 +20,3 @@ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 // routing the request
 $router->route($uri, $method);
-
-
-
-
-
-
-
-
-
-
-

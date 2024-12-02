@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Table;
 
-class User
+class Users
 {
   private $db;
 
@@ -38,9 +38,19 @@ public function findByEmail($email)
     return $stmt->fetch(\PDO::FETCH_ASSOC);
   }
 
-public function getLastInsertedID() {
+public function getLastInsertedUserId() {
     return $this->db->lastInsertId();
 }
+
+  public function updateUserScreenName($userId, $newUserName)
+  {
+    $query = "UPDATE users SET screen_name = :screen_name WHERE user_id = :user_id";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':screen_name', $newUserName);
+    $stmt->bindParam(':user_id', $userId);
+    return $stmt->execute();
+  }
+
 
 
 

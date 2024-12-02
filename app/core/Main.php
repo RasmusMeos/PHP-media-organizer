@@ -1,8 +1,8 @@
 <?php
 
+// Landing page controller
 namespace App\Core;
-use App\Managers\ImageManager;
-use App\Models\Image;
+use app\Models\Aggregate\UserMediaAgg;
 
 class Main extends BaseController
 {
@@ -13,9 +13,8 @@ class Main extends BaseController
 
     $images = [];
     if (isset($_SESSION['user_id'])) {
-      $imageModel = new Image($db);
-      $imageManager = new ImageManager($imageModel);
-      $images = $imageManager->getImagesByUserID($_SESSION['user_id']);
+      $usersMediaModel = new UserMediaAgg($db);
+      $images = $usersMediaModel->getUserMedia($_SESSION['user_id']);
     }
 
     // Render the main_gallery view

@@ -17,7 +17,7 @@ include base_path("app/views/partials/topnav.php");
     <!-- looping through and displaying images -->
     <?php if (!empty($images)): ?>
       <?php foreach ($images as $image): ?>
-        <?php include '../app/views/partials/image_display.php'; ?>
+        <?php include base_path("app/views/partials/image_display.php"); ?>
       <?php endforeach; ?>
     <?php else: ?>
       <p>You haven't uploaded any images yet.</p>
