@@ -3,48 +3,7 @@
 ### Document root: _/path/to/apache/document/root/PHP-media-organizer/public_ ###
 The placeholder _/path/to/apache/document/root_ refers to _/opt/homebrew/var/www_ for example.
 
-## Demo version database schema ##
-```sql
--- Users table: stores user information
-CREATE TABLE users (
-    user_id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE
-);
-
--- Images table: stores information about each image
-CREATE TABLE images (
-    image_id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
-    image_name VARCHAR(255) NOT NULL,
-    taken_date DATETIME NULL,
-    upload_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-    file_path VARCHAR(255) NOT NULL,
-    favorite BOOLEAN DEFAULT FALSE,
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
-);
-
--- Folders table: stores information about folders
-CREATE TABLE folders (
-    folder_id INT PRIMARY KEY AUTO_INCREMENT,
-    folder_name VARCHAR(255) NOT NULL,
-    user_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
-);
-
--- folder-Image relationship table: links images to folders (many-to-many)
-CREATE TABLE folder_images (
-    folder_id INT,
-    image_id INT,
-    PRIMARY KEY (folder_id, image_id),
-    FOREIGN KEY (folder_id) REFERENCES folders(folder_id) ON DELETE CASCADE,
-    FOREIGN KEY (image_id) REFERENCES images(image_id) ON DELETE CASCADE
-);
-```
-
-
-## Proposed final version database schema ##
+## Final version database schema ##
 
 ### 1. Users Table ###
 This table stores information about users.
@@ -52,7 +11,7 @@ This table stores information about users.
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
-    user_name VARCHAR(255) NOT NULL DEFAULT '', -- Visible name, default equals username
+    screen_name VARCHAR(255) NOT NULL DEFAULT '', -- Visible name, default equals username
     email VARCHAR(255) NOT NULL UNIQUE,
     pwd VARCHAR(255) NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -67,7 +26,7 @@ CREATE TABLE media (
     media_name VARCHAR(255) NOT NULL,
     mime_type VARCHAR(50) NOT NULL,
     file_size BIGINT NOT NULL,
-    file_path VARCHAR(255) NOT NULL,
+    file_name VARCHAR(255) NOT NULL,
     download_url VARCHAR(255), -- for future drag-and-drop functionality
     media_description TEXT,
     taken_date TIMESTAMP,
@@ -130,7 +89,6 @@ CREATE TABLE favorite_media (
 );
 ```
 
-
 ## Functional Requirements written as User stories ##
 
 User story, Wikipedia definition:\
@@ -154,7 +112,7 @@ _"We gather user stories through various user research methods such as interview
 - **FR7:** As a user, I want to delete media that I no longer need to keep my gallery clean and organized.
 - **FR8:** As a user, I want to rename media after it is uploaded, giving it a more meaningful name.
 - **FR9:** As a user, I want to view media files in fullscreen to better see the details.
-- **FR10:** As a user, I want to filter media by date, name, or type (e.g., images, videos) to quickly find what I’m looking for.
+- **FR10:** As a user, I want to filter or search media by date, name, or type (e.g., images, videos) to quickly find what I’m looking for.
 
 ### Favorites ###
 
@@ -188,6 +146,46 @@ _"We gather user stories through various user research methods such as interview
 - **FR26:** As a user, I want to upload multiple media, so I can transfer large quantities of files at once.
 - **FR27:** As a user, I want to be able change the language of the app, so I can better understand its contents.
 - **FR28:** As a user, I want to change my on-screen name, so others can recognize me better.
+
+## Demo (old) version database schema ##
+```sql
+-- Users table: stores user information
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
+
+-- Images table: stores information about each image
+CREATE TABLE images (
+    image_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    image_name VARCHAR(255) NOT NULL,
+    taken_date DATETIME NULL,
+    upload_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    file_path VARCHAR(255) NOT NULL,
+    favorite BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- Folders table: stores information about folders
+CREATE TABLE folders (
+    folder_id INT PRIMARY KEY AUTO_INCREMENT,
+    folder_name VARCHAR(255) NOT NULL,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- folder-Image relationship table: links images to folders (many-to-many)
+CREATE TABLE folder_images (
+    folder_id INT,
+    image_id INT,
+    PRIMARY KEY (folder_id, image_id),
+    FOREIGN KEY (folder_id) REFERENCES folders(folder_id) ON DELETE CASCADE,
+    FOREIGN KEY (image_id) REFERENCES images(image_id) ON DELETE CASCADE
+);
+```
 
 
 
