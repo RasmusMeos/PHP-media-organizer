@@ -59,6 +59,15 @@ public function getLastInsertedUserId() {
     return $stmt->execute();
   }
 
+  public function getUserScreenName($userId){
+    $query = "SELECT screen_name FROM users WHERE user_id = :user_id";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':user_id', $userId);
+    $stmt->execute();
+    $result = $stmt->fetch(\PDO::FETCH_ASSOC);
+    return $result['screen_name'] ?? null;
+  }
+
 
 
 
