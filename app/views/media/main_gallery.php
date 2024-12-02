@@ -11,7 +11,7 @@ include base_path("app/views/partials/topnav.php");
     <h3>Organize your images with ease!</h3>
     <p><a href="/signup">Get started by signing up</a></p>
   <?php else: ?>
-    <h1>Welcome back, <?php echo htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?>!</h1>
+    <h1>Welcome back, <?php echo htmlspecialchars($_SESSION['screen_name'] ?? $_SESSION['username'] , ENT_QUOTES, 'UTF-8'); ?>!</h1>
     <p>Your latest images will be displayed here:</p>
 
     <!-- looping through and displaying images -->

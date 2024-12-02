@@ -84,6 +84,12 @@ class Router
       $userModel = new Users($db);
       return new $class($userModel);
     }
+    if ($class === 'App\Controllers\Auth\Profile'){
+      $config = require base_path('config/config.php');
+      $db = new Database($config['db']);
+      $userModel = new Users($db);
+      return new $class($userModel);
+    }
     return new $class();
   }
 

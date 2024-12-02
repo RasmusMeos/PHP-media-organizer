@@ -9,3 +9,5 @@ $router->get('/signup', [App\Controllers\Auth\Signup::class, 'displaySignupForm'
 $router->post('/signup', [App\Controllers\Auth\Signup::class, 'signup']);
 $router->get('/change-password', [App\Controllers\Auth\ChangePassword::class, 'displayChangePasswordForm']);
 $router->post('/change-password', [App\Controllers\Auth\ChangePassword::class, 'changePassword']);
+$router->get('/profile', [App\Controllers\Auth\Profile::class, 'profile']);
+$router->post('/profile', [App\Controllers\Auth\Profile::class, 'changeScreenName']);
