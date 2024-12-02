@@ -3,13 +3,15 @@
 namespace App\Controllers\Auth;
 
 use App\Core\BaseController;
+use App\Models\Table\Users;
+
 class Signup extends BaseController
 {
 
   private $userModel;
   private $errors = [];
 
-  public function __construct(\App\Models\Table\Users $userModel)
+  public function __construct(Users $userModel)
   {
     $this->userModel = $userModel;
   }

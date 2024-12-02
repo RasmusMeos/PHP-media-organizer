@@ -78,6 +78,12 @@ class Router
       $usersMediaModel = new UsersMedia($db);
       return new $class($mediaModel, $usersMediaModel);
     }
+    if ($class === 'App\Controllers\Auth\ChangePassword'){
+      $config = require base_path('config/config.php');
+      $db = new Database($config['db']);
+      $userModel = new Users($db);
+      return new $class($userModel);
+    }
     return new $class();
   }
 

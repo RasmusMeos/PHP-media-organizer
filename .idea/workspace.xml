@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Table/Media.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/ChangePwd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Media/ImageController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Media/UploadImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Media/UploadImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Managers/FolderManager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Managers/ImageManager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Managers/UserManager.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Folder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Image.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Table/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/autoloader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main_gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main_gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/media/upload_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/media/upload_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/image_display.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/image_display.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/serve_image.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/user_images/.gitkeep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +17,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Controllers/Media/UploadImage.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/core/Main.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/public/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
@@ -55,8 +37,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;new-db-schema&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -120,11 +103,34 @@
       <workItem from="1732914558599" duration="669000" />
       <workItem from="1733008895682" duration="17633000" />
       <workItem from="1733098457980" duration="13094000" />
+      <workItem from="1733153073197" duration="1081000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Controllers/Media/UploadImage.php</url>
+          <line>79</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

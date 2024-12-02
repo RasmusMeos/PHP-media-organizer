@@ -20,3 +20,4 @@ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 // routing the request
 $router->route($uri, $method);
+

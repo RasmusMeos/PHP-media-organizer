@@ -51,6 +51,14 @@ public function getLastInsertedUserId() {
     return $stmt->execute();
   }
 
+  public function updateUserPassword($userId, $newPassword){
+    $query = "UPDATE users SET pwd = :pwd WHERE user_id = :user_id";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':pwd', $newPassword);
+    $stmt->bindParam(':user_id', $userId);
+    return $stmt->execute();
+  }
+
 
 
 

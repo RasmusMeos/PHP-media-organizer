@@ -3,7 +3,6 @@
 namespace App\Controllers\Auth;
 
 use App\Core\BaseController;
-use App\Managers\UserManager;
 use app\Models\Table\Users;
 
 class Login extends BaseController {

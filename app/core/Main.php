@@ -18,7 +18,7 @@ class Main extends BaseController
     }
 
     // Render the main_gallery view
-    $this->render('main_gallery', [
+    $this->render('media/main_gallery', [
       'images' => $images,
     ]);
   }

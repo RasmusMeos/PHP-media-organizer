@@ -7,3 +7,5 @@ $router->get('/upload', [App\Controllers\Media\UploadImage::class, 'displayUploa
 $router->post('/upload', [App\Controllers\Media\UploadImage::class, 'upload']);
 $router->get('/signup', [App\Controllers\Auth\Signup::class, 'displaySignupForm']);
 $router->post('/signup', [App\Controllers\Auth\Signup::class, 'signup']);
+$router->get('/change-password', [App\Controllers\Auth\ChangePassword::class, 'displayChangePasswordForm']);
+$router->post('/change-password', [App\Controllers\Auth\ChangePassword::class, 'changePassword']);
