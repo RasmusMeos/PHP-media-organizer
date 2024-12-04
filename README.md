@@ -11,7 +11,7 @@ This table stores information about users.
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
-    screen_name VARCHAR(255) NOT NULL DEFAULT '', -- Visible name, default equals username
+    screen_name VARCHAR(255) DEFAULT NULL, -- Visible name, default equals username
     email VARCHAR(255) NOT NULL UNIQUE,
     pwd VARCHAR(255) NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -100,8 +100,8 @@ _"We gather user stories through various user research methods such as interview
 
 ### User Account Management ###
 
-- **FR1:** As a user, I want to create an account so I can access the platform and organize my media.
-- **FR2:** As a user, I want to log into my account securely so I can access my uploaded content.
+- **FR1:** As a user, I want to create an account, so I can access the platform and organize my media.
+- **FR2:** As a user, I want to log into my account securely, so I can access my uploaded content.
 - **FR3:** As a user, I want to log out from my account to keep my media safe when I'm done.
 
 ### Media Upload & Management ###
@@ -144,8 +144,10 @@ _"We gather user stories through various user research methods such as interview
 - **FR24:** As a user, I want to download media from the platform so that I can store it locally.
 - **FR25:** As a user, I want to manage the privacy of my media, setting some files as "public" for others to view if I choose.
 - **FR26:** As a user, I want to upload multiple media, so I can transfer large quantities of files at once.
-- **FR27:** As a user, I want to be able change the language of the app, so I can better understand its contents.
+- **FR27:** As a user, I want to be able to change the language of the app, so I can better understand its contents.
 - **FR28:** As a user, I want to change my on-screen name, so others can recognize me better.
+- **FR29:** As a user, I want to delete multiple media at once, so I can perform cleanup faster.
+
 
 ## Demo (old) version database schema ##
 ```sql

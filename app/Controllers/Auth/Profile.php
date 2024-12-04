@@ -14,6 +14,10 @@ class Profile extends BaseController
   }
 
   public function profile() {
+    if (!isset($_SESSION['user_id'])) {
+      $this->redirect('/login'); // redirect to login if not authenticated
+    }
+
     $user_data = $this->userModel->findByUsername($_SESSION['username']);
     $data = ['errors' => $_SESSION['errors_profile'] ?? [],
       'user_data' => $user_data ?? []];

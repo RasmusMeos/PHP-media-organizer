@@ -8,8 +8,8 @@ session_set_cookie_params([
   'lifetime' => 1800,
   'domain' => 'rasmus.meos.ee',
   'path' => '/',
-  'secure' => true,
-  'httponly' => true,
+  'secure' => true, // same as ini_set(session.cookie_secure, 1)
+  'httponly' => true, // same as ini_set(session.cookie_httponly, 1)
 ]);
 
 session_start();
