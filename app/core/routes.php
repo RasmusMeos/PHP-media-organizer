@@ -11,3 +11,4 @@ $router->get('/change-password', [App\Controllers\Auth\ChangePassword::class, 'd
 $router->post('/change-password', [App\Controllers\Auth\ChangePassword::class, 'changePassword']);
 $router->get('/profile', [App\Controllers\Auth\Profile::class, 'profile']);
 $router->post('/profile', [App\Controllers\Auth\Profile::class, 'changeScreenName']);
+$router->delete('/delete-image', [App\Controllers\Media\DeleteImage::class, 'deleteImage']);

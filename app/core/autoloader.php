@@ -3,9 +3,9 @@
    function loadClass() {
     spl_autoload_register(function ($class) {
       $classPath = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-      echo "Class name: " . $classPath ."<br>";
+      //echo "Class name: " . $classPath ."<br>";
       $file = base_path($classPath . '.php');
-      echo "Full path: " . $file . "<br>";
+      //echo "Full path: " . $file . "<br>";
 
       if (file_exists($file)) {
         require_once $file;

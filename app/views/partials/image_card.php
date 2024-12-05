@@ -16,7 +16,7 @@
     <a href="favorite_image.php?id=<?php echo $image['media_id']; ?>" class="favorite-icon">
       <img src="/assets/icons/star.svg" alt="Favorite">
     </a>
-    <a href="delete_image.php?id=<?php echo $image['media_id']; ?>" class="delete-icon">
+    <a href="/delete-image?id=<?php echo $image['media_id']; ?>" class="delete-icon" media-id="<?php echo $image['media_id']; ?>">
       <img src="/assets/icons/trash.svg" alt="Delete">
     </a>
   </div>

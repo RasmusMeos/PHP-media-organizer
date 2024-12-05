@@ -17,12 +17,13 @@ include base_path("app/views/partials/topnav.php");
     <!-- looping through and displaying images -->
     <?php if (!empty($images)): ?>
       <?php foreach ($images as $image): ?>
-        <?php include base_path("app/views/partials/image_display.php"); ?>
+        <?php include base_path("app/views/partials/image_card.php"); ?>
       <?php endforeach; ?>
     <?php else: ?>
       <p>You haven't uploaded any images yet.</p>
     <?php endif; ?>
   <?php endif; ?>
+  <?php include base_path("app/views/modals/delete_image.php"); ?>
 </main>
 
 <?php include base_path("app/views/partials/footer.php"); ?>

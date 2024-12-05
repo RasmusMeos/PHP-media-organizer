@@ -29,6 +29,12 @@ class Router
     $this->add('POST', $uri, $controller);
   }
 
+  public function delete($uri, $controller)
+  {
+    $this->add('DELETE', $uri, $controller);
+  }
+
+
 
   public function route($uri, $method)
   {
@@ -38,7 +44,7 @@ class Router
 
         if (is_array($controller)) {
           [$class, $method] = $controller;
-          $controllerInstance = $this->resolveController($class);
+          $controllerInstance = $this->resolveController($class, $route['method']);
           return ($controllerInstance)->$method();
         }
 
@@ -57,8 +63,8 @@ class Router
 
     die();
   }
-  protected function resolveController($class) {
-    echo "Resolving controller for {$class}...<br>";
+  protected function resolveController($class, $method = null) {
+    //echo "Resolving controller for {$class}...<br>";
     if ($class === 'App\Controllers\Auth\Login') {
       $config = require base_path('config/config.php');
       $db = new Database($config['db']);
@@ -89,6 +95,13 @@ class Router
       $db = new Database($config['db']);
       $userModel = new Users($db);
       return new $class($userModel);
+    }
+    if ($class === 'App\Controllers\Media\DeleteImage') {
+      $config = require base_path('config/config.php');
+      $db = new Database($config['db']);
+      $mediaModel = new Media($db);
+      $userModel = new Users($db);
+      return new $class($mediaModel, $userModel, $method);
     }
     return new $class();
   }

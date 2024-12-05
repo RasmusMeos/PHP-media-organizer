@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/autoloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/media/main_gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/media/main_gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/image_display.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/image_card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/image_gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/image_card.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,11 +67,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/css/components" />
+      <recent name="$PROJECT_DIR$/public/assets/css/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/views/auth" />
       <recent name="$PROJECT_DIR$/app/views/media" />
-      <recent name="$PROJECT_DIR$/app/views/partials" />
-      <recent name="$PROJECT_DIR$/app/Core" />
     </key>
   </component>
   <component name="RunManager">
@@ -108,7 +121,7 @@
       <workItem from="1733098457980" duration="13094000" />
       <workItem from="1733153073197" duration="1081000" />
       <workItem from="1733166802571" duration="3750000" />
-      <workItem from="1733328616014" duration="3429000" />
+      <workItem from="1733328616014" duration="27198000" />
     </task>
     <servers />
   </component>
@@ -129,11 +142,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Controllers/Media/UploadImage.php</url>
-          <line>79</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Controllers/Auth/Profile.php</url>
           <line>2</line>
