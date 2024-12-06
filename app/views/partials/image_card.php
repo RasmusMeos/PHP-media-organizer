@@ -13,9 +13,9 @@
   </div>
 
   <div class="image-actions">
-    <a href="javascript:void(0)" class="favorite-icon">
-      <img src="/assets/icons/star.svg" alt="Favorite">
-    </a>
+    <?php $isFavourite = in_array($image['media_id'], $favourites); ?>
+    <button type="button" class="favourite-icon <?php echo $isFavourite ? 'favourited' : ''; ?>" media-id="<?php echo $image['media_id']; ?>">
+      <img src="/assets/icons/<?php echo $isFavourite ? 'star-filled.svg' : 'star.svg'; ?>" alt="<?php echo $isFavourite ? 'Unfavourite' : 'Favourite'; ?>">
     <button type="button" class="delete-icon" media-id="<?php echo $image['media_id']; ?>">
       <img src="/assets/icons/trash.svg" alt="Delete">
     </button>

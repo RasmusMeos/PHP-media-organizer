@@ -2,6 +2,7 @@
 
 namespace App\Core;
 
+use App\Models\Table\FavouriteMedia;
 use App\Models\Table\Media;
 use App\Models\Table\Users;
 use App\Models\Table\UsersMedia;
@@ -103,6 +104,12 @@ class Router
       $userModel = new Users($db);
       $mediaId = strtok($query, "id=");
       return new $class($mediaModel, $userModel, $mediaId);
+    }
+    if ($class === 'App\Controllers\Media\FavouriteImage'){
+      $config = require base_path('config/config.php');
+      $db = new Database($config['db']);
+      $faveMediaModel = new FavouriteMedia($db);
+      return new $class($faveMediaModel);
     }
     return new $class();
   }

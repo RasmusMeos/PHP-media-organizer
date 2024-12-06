@@ -60,4 +60,17 @@
   vertical-align: middle;
   horiz-align: center;
 }
+.favourite-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.favourite-icon img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  horiz-align: center;
+}
+
+
 
