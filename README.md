@@ -79,10 +79,10 @@ CREATE TABLE folder_media (
 );
 ```
 
-### 7. Favorites Table ###
-This table tracks the media that users have marked as favorites.
+### 7. Favourites Table ###
+This table tracks the media that users have marked as favourites.
 ```sql
-CREATE TABLE favorite_media (
+CREATE TABLE favourite_media (
     user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
     media_id INT REFERENCES media(media_id) ON DELETE CASCADE,
     PRIMARY KEY (user_id, media_id)
