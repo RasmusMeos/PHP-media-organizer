@@ -114,10 +114,10 @@ _"We gather user stories through various user research methods such as interview
 - **FR9:** As a user, I want to view media files in fullscreen to better see the details.
 - **FR10:** As a user, I want to filter or search media by date, name, or type (e.g., images, videos) to quickly find what I’m looking for.
 
-### Favorites ###
+### Favourites ###
 
 - **FR11:** As a user, I want to mark media as "favourites" to easily identify content I like or find important.
-- **FR12:** As a user, I want a "Favorites" section that automatically displays my favorited media without manually moving them.
+- **FR12:** As a user, I want a "Favourites" section that automatically displays my favorited media without manually moving them.
 
 ### Folders ###
 
