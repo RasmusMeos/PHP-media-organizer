@@ -116,7 +116,7 @@ _"We gather user stories through various user research methods such as interview
 
 ### Favorites ###
 
-- **FR11:** As a user, I want to mark media as "favorites" so that I can filter and easily access my favorite content.
+- **FR11:** As a user, I want to mark media as "favourites" to easily identify content I like or find important.
 - **FR12:** As a user, I want a "Favorites" section that automatically displays my favorited media without manually moving them.
 
 ### Folders ###
