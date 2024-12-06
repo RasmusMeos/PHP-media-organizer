@@ -50,3 +50,14 @@
   vertical-align: middle;
 }
 
+.delete-icon {
+  width: 32px;
+  height: 32px;
+}
+.delete-icon img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  horiz-align: center;
+}
+

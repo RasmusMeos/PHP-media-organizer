@@ -13,11 +13,11 @@
   </div>
 
   <div class="image-actions">
-    <a href="favorite_image.php?id=<?php echo $image['media_id']; ?>" class="favorite-icon">
+    <a href="javascript:void(0)" class="favorite-icon">
       <img src="/assets/icons/star.svg" alt="Favorite">
     </a>
-    <a href="/delete-image?id=<?php echo $image['media_id']; ?>" class="delete-icon" media-id="<?php echo $image['media_id']; ?>">
+    <button type="button" class="delete-icon" media-id="<?php echo $image['media_id']; ?>">
       <img src="/assets/icons/trash.svg" alt="Delete">
-    </a>
+    </button>
   </div>
 </div>

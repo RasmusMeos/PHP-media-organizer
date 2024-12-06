@@ -36,7 +36,7 @@ class Router
 
 
 
-  public function route($uri, $method)
+  public function route($uri, $method, $query = '')
   {
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
@@ -44,7 +44,7 @@ class Router
 
         if (is_array($controller)) {
           [$class, $method] = $controller;
-          $controllerInstance = $this->resolveController($class, $route['method']);
+          $controllerInstance = $this->resolveController($class, $query);
           return ($controllerInstance)->$method();
         }
 
@@ -63,7 +63,7 @@ class Router
 
     die();
   }
-  protected function resolveController($class, $method = null) {
+  protected function resolveController($class, $query) {
     //echo "Resolving controller for {$class}...<br>";
     if ($class === 'App\Controllers\Auth\Login') {
       $config = require base_path('config/config.php');
@@ -101,7 +101,8 @@ class Router
       $db = new Database($config['db']);
       $mediaModel = new Media($db);
       $userModel = new Users($db);
-      return new $class($mediaModel, $userModel, $method);
+      $mediaId = strtok($query, "id=");
+      return new $class($mediaModel, $userModel, $mediaId);
     }
     return new $class();
   }
