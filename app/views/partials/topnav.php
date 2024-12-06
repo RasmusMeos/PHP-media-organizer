@@ -4,6 +4,7 @@
       <li><a href="/">Home</a></li>
       <?php if (isset($_SESSION['user_id'])): ?>
         <li><a href="/upload">Upload</a> </li>
+        <li><a href="/favourites">Favourites</a> </li>
         <li><a href="/profile">Profile</a></li>
         <li><a href="/change-password">Change Password</a></li>
         <li><a href="/logout">Logout</a></li>

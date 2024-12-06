@@ -5,7 +5,6 @@ namespace App\Core;
 use app\Models\Aggregate\UserMediaAgg;
 use App\Models\Table\FavouriteMedia;
 use App\Models\Table\Users;
-use Couchbase\User;
 
 class Main extends BaseController
 {
