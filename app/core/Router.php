@@ -111,6 +111,13 @@ class Router
       $faveMediaModel = new FavouriteMedia($db);
       return new $class($faveMediaModel);
     }
+    if ($class === 'App\Controllers\Media\RenameMedia'){
+      $config = require base_path('config/config.php');
+      $db = new Database($config['db']);
+      $mediaModel = new Media($db);
+      $userModel = new Users($db);
+      return new $class($mediaModel, $userModel);
+    }
     return new $class();
   }
 

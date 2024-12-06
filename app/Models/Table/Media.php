@@ -46,4 +46,14 @@ class Media
     $stmt->bindParam(':media_id', $mediaId);
     return $stmt->execute();
   }
+
+  public function updateMediaName($mediaId, $newName)
+  {
+    $query = "UPDATE media SET media_name = :media_name WHERE media_id = :media_id";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':media_name', $newName);
+    $stmt->bindParam(':media_id', $mediaId);
+    return $stmt->execute();
+  }
+
 }

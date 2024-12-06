@@ -1,9 +1,16 @@
 <div class="image-wrapper">
   <div class="image-title">
-    <span class="image-name"><?php echo htmlspecialchars($image['media_name'], ENT_QUOTES, 'UTF-8'); ?></span>
-    <a href="edit_image.php?id=<?php echo $image['media_id']; ?>" class="edit-icon">
+    <!-- Display mode -->
+    <span class="image-name" media-id="<?php echo $image['media_id']; ?>">
+        <?php echo htmlspecialchars($image['media_name'], ENT_QUOTES, 'UTF-8'); ?>
+    </span>
+    <!-- Edit mode -->
+    <input type="text" class="image-name-input editing" media-id="<?php echo $image['media_id']; ?>"
+           value="<?php echo htmlspecialchars($image['media_name'], ENT_QUOTES, 'UTF-8'); ?>">
+
+    <button type="button" class="edit-icon" media-id="<?php echo $image['media_id']; ?>">
       <img src="/assets/icons/pencil.svg" alt="Edit">
-    </a>
+    </button>
   </div>
 
   <div class="image-container">

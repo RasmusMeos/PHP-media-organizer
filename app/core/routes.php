@@ -14,3 +14,4 @@ $router->post('/profile', [App\Controllers\Auth\Profile::class, 'changeScreenNam
 $router->delete('/delete-image', [App\Controllers\Media\DeleteImage::class, 'deleteImage']);
 $router->post('/favourite-image', [App\Controllers\Media\FavouriteImage::class, 'toggleFavourite']);
 $router->get('/favourites', [App\Controllers\Favourites\Favourites::class, 'index']);
+$router->post('/rename-media', [App\Controllers\Media\RenameMedia::class, 'rename']);

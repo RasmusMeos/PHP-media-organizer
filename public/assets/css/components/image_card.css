@@ -72,5 +72,14 @@
   horiz-align: center;
 }
 
+.image-name-input {
+  display: none;
+}
 
+.image-title.editing .image-name {
+  display: none;
+}
 
+.image-title.editing .image-name-input {
+  display: inline-block;
+}
