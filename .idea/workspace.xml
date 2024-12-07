@@ -7,10 +7,6 @@
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/image_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/image_card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/topnav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/components/image_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/image_card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/icons/fullscreen.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +61,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/assets/icons" />
       <recent name="$PROJECT_DIR$/public/assets/css/components" />
       <recent name="$PROJECT_DIR$/public/assets/css/pages" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/views/auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,7 +119,7 @@
       <workItem from="1733430345616" duration="45419000" />
       <workItem from="1733500215720" duration="2189000" />
       <workItem from="1733503624435" duration="1000000" />
-      <workItem from="1733578881892" duration="9755000" />
+      <workItem from="1733578881892" duration="11648000" />
     </task>
     <servers />
   </component>

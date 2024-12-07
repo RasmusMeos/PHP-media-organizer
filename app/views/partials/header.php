@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $title ?? 'PHP Media Organizer'?></title>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/assets/css/pages/main_gallery.css">
   <link rel="stylesheet" href="/assets/css/components/image_card.css">
   <link rel="stylesheet" href="/assets/css/components/modal.css">
