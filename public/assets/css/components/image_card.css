@@ -19,6 +19,7 @@
 
 .image-container {
   margin-bottom: 10px;
+  position: relative;
 }
 
 .image-thumbnail {
@@ -82,4 +83,28 @@
 
 .image-title.editing .image-name-input {
   display: inline-block;
+}
+
+/* transition to fullscreen styling */
+.fullscreen-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 25%;
+  padding: 5px;
+  display: none; /* only shown on hover */
+  cursor: pointer;
+  z-index: 1;
+}
+
+.fullscreen-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.image-container:hover .fullscreen-icon {
+  display: block;
 }

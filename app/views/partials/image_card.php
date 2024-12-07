@@ -16,7 +16,10 @@
   <div class="image-container">
     <img src="/uploads/images/<?php echo htmlspecialchars(basename($image['file_name']), ENT_QUOTES, 'UTF-8'); ?>"
          alt="<?php echo htmlspecialchars($image['media_name'], ENT_QUOTES, 'UTF-8'); ?>"
-         class="image-thumbnail">
+         class="image-thumbnail" media-id="<?php echo $image['media_id']; ?>">
+    <button type="button" class="fullscreen-icon" media-id="<?php echo $image['media_id']; ?>">
+      <img src="/assets/icons/fullscreen.png" alt="View Fullscreen">
+    </button>
   </div>
 
   <div class="image-actions">
