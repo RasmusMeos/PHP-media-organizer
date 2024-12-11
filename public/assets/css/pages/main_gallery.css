@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #00007c;
+  background-color: #004ea3;
   padding: 1rem;
   top: 0;
   position: sticky;
@@ -42,5 +42,24 @@ main {
 }
 
 h1 {
-  color: #00007c;
+  color: #0056b3;
 }
+
+.filter-button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#open-filter {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#open-filter:hover {
+  background: #0056b3;
+}
+

@@ -1,0 +1,69 @@
+.filter-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.filter-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.filter-modal h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.filter-modal label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.filter-modal select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.filter-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#apply-filter {
+  background: #007bff;
+  color: white;
+}
+#apply-filter:hover {
+  background: #0056b3;
+}
+
+#cancel-filter {
+  background: #ccc;
+  color: black;
+}
+#cancel-filter:hover {
+  background-color: #afafaf;
+}

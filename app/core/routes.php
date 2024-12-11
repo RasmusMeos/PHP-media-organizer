@@ -15,3 +15,4 @@ $router->delete('/delete-image', [App\Controllers\Media\DeleteImage::class, 'del
 $router->post('/favourite-image', [App\Controllers\Media\FavouriteImage::class, 'toggleFavourite']);
 $router->get('/favourites', [App\Controllers\Favourites\Favourites::class, 'index']);
 $router->post('/rename-media', [App\Controllers\Media\RenameMedia::class, 'rename']);
+$router->get('/empty-result', [App\Controllers\System\EmptyResult::class, 'index']);

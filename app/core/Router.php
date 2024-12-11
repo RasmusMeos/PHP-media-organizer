@@ -37,7 +37,7 @@ class Router
 
 
 
-  public function route($uri, $method, $query = '')
+  public function route($uri, $method, $query = [])
   {
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
@@ -64,14 +64,15 @@ class Router
 
     die();
   }
-  protected function resolveController($class, $query) {
+  protected function resolveController($class, array $query) {
     //echo "Resolving controller for {$class}...<br>";
-    if ($class === 'App\Core\Main' && $query !== '') {
-      $pageId = strtok($query, "page=");
-      return new $class($pageId);
+    if ($class === 'App\Core\Main' && !empty($query)) {
+      $pageId = isset($query['page']) ? (int)$query['page'] : 1;
+      $filters = array_filter($query, fn($key) => $key !== 'page', ARRAY_FILTER_USE_KEY);
+      return new $class($pageId, $filters);
     }
     if ($class === 'App\Controllers\Favourites\Favourites' && $query !== '') {
-      $pageId = strtok($query, "page=");
+      $pageId = isset($query['page']) ? (int)$query['page'] : 1;
       return new $class($pageId);
     }
     if ($class === 'App\Controllers\Auth\Login') {

@@ -9,14 +9,18 @@
   <link rel="stylesheet" href="/assets/css/pages/login.css">
   <link rel="stylesheet" href="/assets/css/pages/signup.css">
   <link rel="stylesheet" href="/assets/css/components/image_card.css">
-  <link rel="stylesheet" href="/assets/css/components/modal.css">
+  <link rel="stylesheet" href="/assets/css/modals/delete.css">
   <link rel="stylesheet" href="/assets/css/components/fullscreen.css">
   <link rel="stylesheet" href="/assets/css/components/pagination.css">
+  <link rel="stylesheet" href="/assets/css/modals/filter.css">
+  <link rel="stylesheet" href="/assets/css/pages/empty_result.css">
 
-  <script src="/assets/js/components/modal.js"></script>
+  <script src="/assets/js/modals/delete.js"></script>
   <script src="/assets/js/components/favourite.js"></script>
   <script src="/assets/js/components/rename.js"></script>
   <script src="/assets/js/components/fullscreen.js"></script>
+  <script src="/assets/js/modals/filter.js"></script>
+
 
 
 </head>

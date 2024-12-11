@@ -14,9 +14,16 @@ include base_path("app/views/partials/topnav.php");
   <h1><?php echo $currentPage === 1 ? "Welcome back, " . htmlspecialchars($_SESSION['screen_name'] ?? $_SESSION['username'] , ENT_QUOTES, 'UTF-8') . "!": ""; ?></h1>
   <p><?php echo !empty($images) && $currentPage === 1 ? "Your latest images will be displayed here:" : ""; ?></p>
   <p><?php echo empty($images) ? "You have not uploaded any images yet:" : ""; ?></p>
-
   <?php endif; ?>
+
+  <?php if (!empty($images)): ?>
 </div>
+<div class="filter-button-container">
+  <button id="open-filter">Filter Media</button>
+</div>
+<?php include base_path("app/views/modals/filter.php"); ?>
+<?php endif; ?>
+
 
 <main>
     <!-- looping through and displaying images -->

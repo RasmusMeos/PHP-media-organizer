@@ -1,0 +1,20 @@
+.empty-results {
+  text-align: center;
+  margin: 50px auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.empty-results h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #0056b3;
+}
+
+.empty-results p {
+  margin-bottom: 20px;
+}
+

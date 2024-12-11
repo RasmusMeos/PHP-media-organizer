@@ -9,8 +9,10 @@ use App\Models\Table\Users;
 class Main extends BaseController
 {
   private int $pageId;
-  public function __construct(int $pageId = 1) {
+  private array $filters;
+  public function __construct(int $pageId = 1, array $filters = []) {
     $this->pageId = $pageId;
+    $this->filters = $filters;
   }
   public function index(): void
   {
@@ -41,13 +43,17 @@ class Main extends BaseController
     private function getPaginationData(UserMediaAgg $model, int $pageId): array
   {
       $itemsPerPage = 2;
-      $totalItems = $model->getUserMediaTotalCount($_SESSION['user_id']);
+      $totalItems = $model->getUserMediaCount($_SESSION['user_id'], $this->filters);
       $totalPages = (int)max(1, (ceil($totalItems / $itemsPerPage)));
       $offset = ($pageId - 1) * $itemsPerPage;
-      $images = $model->getUserMedia($_SESSION['user_id'], $itemsPerPage, $offset);
+      $media = $model->getUserMedia($_SESSION['user_id'], $itemsPerPage, $offset, $this->filters);
+      if (empty($media)) {
+        $this->redirect('/empty-result');
+      }
+
 
       return [
-        'images' => $images,
+        'images' => $media,
         'currentPage' => $pageId,
         'totalPages' => $totalPages,
         'baseEndpoint' => '/',
