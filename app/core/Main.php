@@ -8,7 +8,11 @@ use App\Models\Table\Users;
 
 class Main extends BaseController
 {
-  public function index()
+  private int $pageId;
+  public function __construct(int $pageId = 1) {
+    $this->pageId = $pageId;
+  }
+  public function index(): void
   {
     if (isset($_SESSION['user_id'])) {
       $config = require base_path('config/config.php');
@@ -17,19 +21,36 @@ class Main extends BaseController
       $userModel = new Users($db);
       $faveMediaModel = new FavouriteMedia($db);
 
-      $images = $usersMediaModel->getUserMedia($_SESSION['user_id']);
+      $pagination = $this->getPaginationData($usersMediaModel, $this->pageId);
+      if ($pagination['currentPage'] > $pagination['totalPages']) {
+        $this->redirect('/');
+      }
       $favourites = array_column($faveMediaModel->getUserFavorites($_SESSION['user_id']), 'media_id');
       $_SESSION['screen_name'] = $userModel->getUserScreenName($_SESSION['user_id']);
 
       // logged in
-      $this->render('media/main_gallery', [
-        'images' => $images,
-        'favourites' => $favourites
-      ]);
-    } else{
+      $this->render('media/main_gallery', array_merge($pagination, [
+          'favourites' => $favourites,
+      ]));
+    } else {
       // not logged in
       $this->render('media/main_gallery');
     }
+  }
 
+    private function getPaginationData(UserMediaAgg $model, int $pageId): array
+  {
+      $itemsPerPage = 2;
+      $totalItems = $model->getUserMediaTotalCount($_SESSION['user_id']);
+      $totalPages = (int)max(1, (ceil($totalItems / $itemsPerPage)));
+      $offset = ($pageId - 1) * $itemsPerPage;
+      $images = $model->getUserMedia($_SESSION['user_id'], $itemsPerPage, $offset);
+
+      return [
+        'images' => $images,
+        'currentPage' => $pageId,
+        'totalPages' => $totalPages,
+        'baseEndpoint' => '/',
+      ];
   }
 }

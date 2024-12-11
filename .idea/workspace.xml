@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_12_2024,_06_51_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_12_2024__06_51__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Favourites/Favourites.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Favourites/Favourites.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aggregate/FavouriteMediaAgg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aggregate/FavouriteMediaAgg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/auth/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/auth/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/favourites/favourites_gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favourites/favourites_gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/media/main_gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/media/main_gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/components/image_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/image_card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/components/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -61,8 +76,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/assets/icons" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/assets/css/components" />
       <recent name="$PROJECT_DIR$/public/assets/css/pages" />
       <recent name="$PROJECT_DIR$" />
@@ -119,7 +134,9 @@
       <workItem from="1733430345616" duration="45419000" />
       <workItem from="1733500215720" duration="2189000" />
       <workItem from="1733503624435" duration="1000000" />
-      <workItem from="1733578881892" duration="11648000" />
+      <workItem from="1733578881892" duration="12683000" />
+      <workItem from="1733787333668" duration="16706000" />
+      <workItem from="1733882071360" duration="10059000" />
     </task>
     <servers />
   </component>

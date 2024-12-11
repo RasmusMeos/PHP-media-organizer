@@ -1,6 +1,7 @@
 .image-wrapper {
-  width: 250px;
-  margin: 15px;
+  max-width: 25%;
+  min-width: 300px;
+  margin: 15px auto;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;

@@ -7,7 +7,7 @@ include base_path("app/views/partials/error_messages.php");
 displayErrors($errors);
 ?>
 
-<main>
+<div class="signup">
   <h1>Kasutaja loomine</h1>
 
 
@@ -24,6 +24,6 @@ displayErrors($errors);
 
     <button type="submit">Loo kasutaja</button>
   </form>
-</main>
+</div>
 
 <?php include base_path("app/views/partials/footer.php"); ?>

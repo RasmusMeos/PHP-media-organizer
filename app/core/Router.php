@@ -66,6 +66,14 @@ class Router
   }
   protected function resolveController($class, $query) {
     //echo "Resolving controller for {$class}...<br>";
+    if ($class === 'App\Core\Main' && $query !== '') {
+      $pageId = strtok($query, "page=");
+      return new $class($pageId);
+    }
+    if ($class === 'App\Controllers\Favourites\Favourites' && $query !== '') {
+      $pageId = strtok($query, "page=");
+      return new $class($pageId);
+    }
     if ($class === 'App\Controllers\Auth\Login') {
       $config = require base_path('config/config.php');
       $db = new Database($config['db']);

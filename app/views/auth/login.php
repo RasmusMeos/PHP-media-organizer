@@ -7,7 +7,7 @@ include base_path("app/views/partials/error_messages.php");
 displayErrors($errors);
 ?>
 
-<main>
+<div class="login">
   <h1>Login</h1>
 
   <form action="/login" method="POST">
@@ -19,6 +19,6 @@ displayErrors($errors);
 
     <button type="submit">Login</button>
   </form>
-</main>
+</div>
 
 <?php include base_path("app/views/partials/footer.php"); ?>

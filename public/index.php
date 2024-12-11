@@ -22,6 +22,8 @@ $query = $_SERVER['QUERY_STRING'] ?? '';
 
 error_log("URI: " . $uri);
 error_log("METHOD: " . $method);
+error_log("QUERY: " . $query);
+
 
 // routing the request
 $router->route($uri, $method, $query);
