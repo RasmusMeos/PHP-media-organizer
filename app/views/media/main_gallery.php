@@ -11,7 +11,7 @@ include base_path("app/views/partials/topnav.php");
     <h3>Organize your images with ease!</h3>
     <p><a href="/signup">Get started by signing up</a></p>
   <?php else: ?>
-    <?php if ($totalPages === 0): ?>
+    <?php if ($totalPages === 0): ?> <!-- $totalPages refers to amount of images in this context -->
       <h1><?php echo "Welcome back, " . htmlspecialchars($_SESSION['screen_name'] ?? $_SESSION['username'] , ENT_QUOTES, 'UTF-8') . "!"; ?></h1>
       <p><?php echo "You have not uploaded any images yet:"; ?></p>
     <?php else: ?>
