@@ -24,6 +24,12 @@ class Main extends BaseController
       $faveMediaModel = new FavouriteMedia($db);
 
       $pagination = $this->getPaginationData($usersMediaModel, $this->pageId);
+      if (!$pagination) {
+        $this->render('media/main_gallery', [
+          'totalPages' => 0,
+        ]);
+        exit();
+      }
       if ($pagination['currentPage'] > $pagination['totalPages']) {
         $this->redirect('/');
       }
@@ -40,10 +46,11 @@ class Main extends BaseController
     }
   }
 
-    private function getPaginationData(UserMediaAgg $model, int $pageId): array
+    private function getPaginationData(UserMediaAgg $model, int $pageId): array|bool
   {
       $itemsPerPage = 2;
       $totalItems = $model->getUserMediaCount($_SESSION['user_id'], $this->filters);
+      if ($totalItems === 0) return false;
       $totalPages = (int)max(1, (ceil($totalItems / $itemsPerPage)));
       $offset = ($pageId - 1) * $itemsPerPage;
       $media = $model->getUserMedia($_SESSION['user_id'], $itemsPerPage, $offset, $this->filters);
