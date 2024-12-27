@@ -50,6 +50,7 @@ class Main extends BaseController
   {
       $itemsPerPage = 2;
       $totalItems = $model->getUserMediaCount($_SESSION['user_id'], $this->filters);
+      error_log(print_r($totalItems,true));
       if ($totalItems === 0) return false;
       $totalPages = (int)max(1, (ceil($totalItems / $itemsPerPage)));
       $offset = ($pageId - 1) * $itemsPerPage;

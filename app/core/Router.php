@@ -71,7 +71,7 @@ class Router
       $filters = array_filter($query, fn($key) => $key !== 'page', ARRAY_FILTER_USE_KEY);
       return new $class($pageId, $filters);
     }
-    if ($class === 'App\Controllers\Favourites\Favourites' && $query !== '') {
+    if ($class === 'App\Controllers\Favourites\Favourites' && !empty($query)) {
       $pageId = isset($query['page']) ? (int)$query['page'] : 1;
       return new $class($pageId);
     }
@@ -111,7 +111,7 @@ class Router
       $db = new Database($config['db']);
       $mediaModel = new Media($db);
       $userModel = new Users($db);
-      $mediaId = strtok($query, "id=");
+      $mediaId = (int)$query['id'];
       return new $class($mediaModel, $userModel, $mediaId);
     }
     if ($class === 'App\Controllers\Media\FavouriteImage'){

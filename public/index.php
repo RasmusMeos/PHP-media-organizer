@@ -24,6 +24,7 @@ $queryParams = $_SERVER['QUERY_STRING'] ?? '';
 error_log("URI: " . $uri);
 error_log("METHOD: " . $method);
 error_log("QUERY: " . $queryParams);
+//var_dump($query);
 
 // routing the request
 $router->route($uri, $method, $query);

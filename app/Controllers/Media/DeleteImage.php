@@ -10,7 +10,7 @@ class DeleteImage extends BaseController
 {
   private $mediaModel;
   private $userModel;
-  private $mediaId;
+  private int $mediaId;
   public function __construct(Media $mediaModel, Users $userModel, $mediaId)
   {
     $this->mediaModel = $mediaModel;
@@ -22,7 +22,7 @@ class DeleteImage extends BaseController
   {
     if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
 
-      if ($this->mediaId === '') {
+      if (is_null($this->mediaId)) {
         http_response_code(400); // Bad Request
         echo json_encode(["error" => "Invalid request: Missing image ID."]);
         die();
