@@ -41,9 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  // cancel button logic
+  // closing the pop-up logic
   cancelDeleteBtn.addEventListener("click", () => {
-    modal.classList.remove("show"); // closing the modal
+    modal.classList.remove("show");
   });
+
+  modal.addEventListener("click", (e) => {
+    if(e.target === modal)
+      modal.classList.remove("show");
+  });
+
 });
 
