@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     filterModal.style.display = "none";
   });
 
+  filterModal.addEventListener("click", (e) => {
+    if(e.target === filterModal)
+    filterModal.style.display = "none";
+  });
+
 
   applyFilterBtn.addEventListener("click", () => {
     const order = document.getElementById("order").value;

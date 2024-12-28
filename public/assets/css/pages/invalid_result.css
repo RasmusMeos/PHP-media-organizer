@@ -1,4 +1,4 @@
-.empty-results {
+.invalid-result {
   text-align: center;
   margin: 50px auto;
   padding: 1rem;
@@ -8,13 +8,13 @@
   max-width: 600px;
 }
 
-.empty-results h2 {
+.invalid-result h2 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #0056b3;
 }
 
-.empty-results p {
+.invalid-result p {
   margin-bottom: 20px;
 }
 

@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Media/DeleteImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Media/DeleteImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/system/empty_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/system/empty_result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/modals/delete.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/modals/delete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/pages/empty_result.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/pages/invalid_result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/modals/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/modals/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/modals/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/modals/filter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +132,8 @@
       <workItem from="1733882071360" duration="32650000" />
       <workItem from="1735054688441" duration="3276000" />
       <workItem from="1735242758626" duration="1172000" />
+      <workItem from="1735324934075" duration="636000" />
+      <workItem from="1735344883306" duration="7364000" />
     </task>
     <servers />
   </component>
