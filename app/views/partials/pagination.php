@@ -1,4 +1,4 @@
-<?php if ($totalPages > 1): ?>
+<?php if ($has_content && $totalPages > 1): ?>
   <?php
   $currentParams = $_GET; // existing query parameters
 

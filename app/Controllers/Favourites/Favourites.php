@@ -39,13 +39,14 @@ class Favourites extends BaseController
 
   private function getPaginationData(FavouriteMediaAgg $model, int $pageId): array
   {
-    $itemsPerPage = 2;
+    $itemsPerPage = 5;
     $totalItems = $model->getFavouriteMediaTotalCount($_SESSION['user_id']);
     $totalPages = (int)max(1, (ceil($totalItems / $itemsPerPage)));
     $offset = ($pageId - 1) * $itemsPerPage;
     $images = $model->getFavouriteMedia($_SESSION['user_id'], $itemsPerPage, $offset);
 
     return [
+      'has_content' => true,
       'images' => $images,
       'currentPage' => $pageId,
       'totalPages' => $totalPages,

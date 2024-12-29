@@ -26,7 +26,8 @@ class Main extends BaseController
       $pagination = $this->getPaginationData($usersMediaModel, $this->pageId);
       if (!$pagination) {
         $this->render('media/main_gallery', [
-          'totalPages' => 0,
+          'has_content' => false,
+          'result' => true,
         ]);
         exit();
       }
@@ -42,7 +43,9 @@ class Main extends BaseController
       ]));
     } else {
       // not logged in
-      $this->render('media/main_gallery');
+      $this->render('media/main_gallery', [
+        'has_content' => false,
+      ]);
     }
   }
 
@@ -55,11 +58,17 @@ class Main extends BaseController
       $offset = ($pageId - 1) * $itemsPerPage;
       $media = $model->getUserMedia($_SESSION['user_id'], $itemsPerPage, $offset, $this->filters);
       if (empty($media)) {
-        $this->redirect('/empty-result');
+        return [
+          'has_content' => true,
+          'result' => false,
+          'currentPage' => 0,
+          'totalPages' => 0,
+        ];
       }
 
-
       return [
+        'has_content' => true,
+        'result' => true,
         'images' => $media,
         'currentPage' => $pageId,
         'totalPages' => $totalPages,
