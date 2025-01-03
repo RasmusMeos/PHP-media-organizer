@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/media/main_gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/media/main_gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/components/image_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/image_card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Folder/CreateFolder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folders/CreateAlbum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Folder/DeleteFolder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folders/DeleteAlbum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Folder/EditFolder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folders/RenameAlbum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Folder/FolderController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/topnav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -133,7 +138,8 @@
       <workItem from="1735432522414" duration="3053000" />
       <workItem from="1735526435292" duration="6686000" />
       <workItem from="1735542565243" duration="1102000" />
-      <workItem from="1735865824166" duration="391000" />
+      <workItem from="1735865824166" duration="9532000" />
+      <workItem from="1735877433298" duration="12120000" />
     </task>
     <servers />
   </component>

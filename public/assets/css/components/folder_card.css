@@ -1,0 +1,124 @@
+/* wrapper */
+.folder-card {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #deeaff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.folder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-header h3 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.folder-header h3 button.rename-folder-btn {
+  margin-left: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.folder-header h3 button.rename-folder-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.toggle-description-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+
+.folder-description-container p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: black;
+}
+.folder-description-container {
+  background-color: #fff;
+  padding: 1px 5px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.folder-description.hidden {
+  display: none;
+}
+
+.folder-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.folder-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.folder-actions button img {
+  width: 16px;
+  height: 16px;
+}
+#rename-folder-btn {
+  background-color: #dddddd;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 6px;
+}
+
+#rename-folder-btn:hover{
+  background-color: #a3a3a3;
+}
+
+#rename-folder-btn img {
+  width: 12px;
+  height: 12px;
+}
+
+.folder-actions .add-media-btn {
+  background-color: #dddddd;
+  color: #fff;
+}
+
+.folder-actions .add-media-btn:hover {
+  background-color: #a3a3a3;
+}
+
+.folder-actions .delete-folder-btn {
+  background-color: #dddddd;
+  color: #fff;
+}
+
+.folder-actions .delete-folder-btn:hover {
+  background-color: #a3a3a3;
+}

@@ -3,8 +3,10 @@
 namespace App\Core;
 
 use App\Models\Table\FavouriteMedia;
+use App\Models\Table\Folders;
 use App\Models\Table\Media;
 use App\Models\Table\Users;
+use App\Models\Table\UsersFolders;
 use App\Models\Table\UsersMedia;
 
 class Router
@@ -126,6 +128,13 @@ class Router
       $mediaModel = new Media($db);
       $userModel = new Users($db);
       return new $class($mediaModel, $userModel);
+    }
+    if ($class === 'App\Controllers\Folders\CreateAlbum') {
+      $config = require base_path('config/config.php');
+      $db = new Database($config['db']);
+      $foldersModel = new Folders($db);
+      $usersFoldersModel = new UsersFolders($db);
+      return new $class($foldersModel, $usersFoldersModel);
     }
     return new $class();
   }

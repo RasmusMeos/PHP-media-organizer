@@ -1,5 +1,5 @@
 <?php
-$router->get('/', [\App\Core\Main::class, 'index']);
+$router->get('/', [App\Core\Main::class, 'index']);
 $router->get('/login', [App\Controllers\Auth\Login::class, 'displayLoginForm']);
 $router->post('/login', [App\Controllers\Auth\Login::class, 'login']);
 $router->get('/logout', [App\Controllers\Auth\Logout::class, 'logout']);
@@ -15,4 +15,5 @@ $router->delete('/delete-image', [App\Controllers\Media\DeleteImage::class, 'del
 $router->post('/favourite-image', [App\Controllers\Media\FavouriteImage::class, 'toggleFavourite']);
 $router->get('/favourites', [App\Controllers\Favourites\Favourites::class, 'index']);
 $router->post('/rename-media', [App\Controllers\Media\RenameMedia::class, 'rename']);
-// $router->get('/empty-result', [App\Controllers\System\EmptyResult::class, 'index']);
+$router->get('/albums', [App\Controllers\Folders\Albums::class, 'index']);
+$router->post('/create-folder', [App\Controllers\Folders\CreateAlbum::class, 'createFolder']);
