@@ -21,4 +21,13 @@ class Folders
     $stmt->bindParam(':folder_description', $folderDesc);
     return $stmt->execute();
   }
+
+  public function updateFolderName($folderId, $newName)
+  {
+    $query = "UPDATE folders SET folder_name = :folder_name WHERE folder_id = :folder_id";
+    $stmt = $this->db->prepare($query);
+    $stmt->bindParam(':folder_name', $newName);
+    $stmt->bindParam(':folder_id', $folderId);
+    return $stmt->execute();
+  }
 }

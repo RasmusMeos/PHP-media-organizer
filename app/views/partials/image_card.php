@@ -9,7 +9,7 @@
            value="<?php echo htmlspecialchars($image['media_name'], ENT_QUOTES, 'UTF-8'); ?>">
 
     <button type="button" class="edit-icon" media-id="<?php echo $image['media_id']; ?>">
-      <img src="/assets/icons/pencil.svg" alt="Edit">
+      <img src="/assets/icons/pencil.svg" alt="Rename">
     </button>
   </div>
 

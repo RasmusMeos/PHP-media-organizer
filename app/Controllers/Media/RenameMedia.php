@@ -17,7 +17,7 @@ class RenameMedia extends BaseController
     $this->userModel = $userModel;
   }
 
-  public function rename()
+  public function rename(): void
   {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
       http_response_code(405); // Method Not Allowed

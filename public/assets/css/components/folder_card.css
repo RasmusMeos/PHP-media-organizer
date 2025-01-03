@@ -1,8 +1,8 @@
 /* wrapper */
-.folder-card {
-  display: flex;
+.folder-wrapper {
+  display: inline-block;
   width: 90%;
-  flex-direction: column;
+  /*flex-direction: column; */
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 15px;
@@ -16,31 +16,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.folder-header h3 {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  font-size: 18px;
   font-weight: bold;
-  color: #333;
+  position: relative;
 }
 
-.folder-header h3 button.rename-folder-btn {
-  margin-left: 10px;
-  padding: 5px;
+
+.folder-name-input {
+  display: none;
+}
+
+.folder-title.editing .folder-name {
+  display: none;
+}
+
+.folder-title.editing .folder-name-input {
+  display: inline-block;
+  width: fit-content;
+}
+
+.rename-folder {
   background-color: transparent;
+  position: relative;
+  display: inline-block;
   border: none;
+  border-radius: 5px;
+  padding: 4px 6px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
-.folder-header h3 button.rename-folder-btn img {
-  width: 16px;
-  height: 16px;
+.rename-folder:hover{
+  background-color: #a3a3a3;
+}
+
+.rename-folder img {
+  width: 12px;
+  height: 12px;
+  vertical-align: center;
 }
 
 .toggle-description-btn {
+  position: relative;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);  /* Center vertically */
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -88,25 +107,9 @@
   width: 16px;
   height: 16px;
 }
-#rename-folder-btn {
-  background-color: #dddddd;
-  margin-left: 5px;
-  border: none;
-  border-radius: 5px;
-  padding: 4px 6px;
-}
-
-#rename-folder-btn:hover{
-  background-color: #a3a3a3;
-}
-
-#rename-folder-btn img {
-  width: 12px;
-  height: 12px;
-}
 
 .folder-actions .add-media-btn {
-  background-color: #dddddd;
+  background-color: transparent;
   color: #fff;
 }
 
@@ -115,7 +118,7 @@
 }
 
 .folder-actions .delete-folder-btn {
-  background-color: #dddddd;
+  background-color: transparent;
   color: #fff;
 }
 

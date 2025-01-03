@@ -24,6 +24,7 @@
   <script src="/assets/js/components/fullscreen.js"></script>
   <script src="/assets/js/modals/filter.js"></script>
   <script src="/assets/js/components/folder.js"></script>
+  <script src="/assets/js/components/rename_folder.js"></script>
 
 
 

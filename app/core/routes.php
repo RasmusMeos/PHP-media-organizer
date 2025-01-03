@@ -17,3 +17,5 @@ $router->get('/favourites', [App\Controllers\Favourites\Favourites::class, 'inde
 $router->post('/rename-media', [App\Controllers\Media\RenameMedia::class, 'rename']);
 $router->get('/albums', [App\Controllers\Folders\Albums::class, 'index']);
 $router->post('/create-folder', [App\Controllers\Folders\CreateAlbum::class, 'createFolder']);
+$router->post('/rename-folder', [App\Controllers\Folders\RenameAlbum::class, 'rename']);
+

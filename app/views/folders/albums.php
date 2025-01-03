@@ -39,7 +39,6 @@ include base_path("app/views/partials/error_messages.php");
       <?php else: ?>
         <p>No albums found. Create one to get started!</p>
       <?php endif; ?>
-
   </div>
 
 <?php include base_path("app/views/partials/footer.php"); ?>

@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-   // get all the edit buttons
-  document.querySelectorAll(".edit-icon").forEach((editButton) => {
-    editButton.addEventListener("click", () => {
-      const mediaId = editButton.getAttribute("media-id");
-      const titleContainer = editButton.closest(".image-title");
+
+  document.querySelectorAll(".rename-folder").forEach((renameButton) => {
+    renameButton.addEventListener("click", () => {
+      const folderId = renameButton.getAttribute("folder-id");
+      const titleContainer = renameButton.closest(".folder-title");
       titleContainer.classList.add("editing"); // editing mode ON
-      const nameInput = titleContainer.querySelector(`.image-name-input[media-id="${mediaId}"]`);
+      const nameInput = titleContainer.querySelector(`.folder-name-input[folder-id="${folderId}"]`);
       nameInput.focus(); // autofocus on the input field
       nameInput.select(); //everything selected
-      // nameInput.setSelectionRange(nameInput.value.length, nameInput.value.length); // cursor placed to the end
     });
-  });
+});
 
-  // name change submission logic
-  document.querySelectorAll(".image-name-input").forEach((nameInput) => {
+  // rename folder submission logic
+  document.querySelectorAll(".folder-name-input").forEach((nameInput) => {
     nameInput.addEventListener("blur", () => submitNameChange(nameInput));
     nameInput.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
@@ -24,14 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function submitNameChange(nameInput) {
-    const mediaId = nameInput.getAttribute("media-id");
+    const folderId = nameInput.getAttribute("folder-id");
     const newName = nameInput.value.trim();
-    const titleContainer = nameInput.closest(".image-title");
-    const nameSpan = titleContainer.querySelector(`.image-name[media-id="${mediaId}"]`);
+    const titleContainer = nameInput.closest(".folder-title");
+    const nameSpan = titleContainer.querySelector(`.folder-name[folder-id="${folderId}"]`);
     const currentName = nameSpan.textContent.trim();
 
     if (!newName) {
-      alert("Media name cannot be empty.");
+      alert("Folder name cannot be empty.");
       nameInput.value = currentName;
       titleContainer.classList.remove("editing");
       return;
@@ -42,23 +41,23 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    fetch(`/rename-media`, {
+    fetch(`/rename-folder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ media_id: mediaId, media_name: newName }),
+      body: JSON.stringify({ folder_id: folderId, folder_name: newName }),
     })
       .then((response) => {
         if (!response.ok) {
           return response.json().then((data) => {
-            throw new Error(data.error || "Failed to rename media.");
+            throw new Error(data.error || "Failed to rename the folder.");
           });
         }
         return response.json();
       })
       .then((data) => {
-        nameSpan.textContent = newName; // new name displayed in the UI
+        nameSpan.textContent = newName; // new folder name displayed in the UI
         titleContainer.classList.remove("editing"); // editing mode OFF
       })
       .catch((error) => {
@@ -66,4 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(error.message);
       });
   }
+
+
 });
