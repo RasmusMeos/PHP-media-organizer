@@ -72,7 +72,18 @@ CREATE TABLE users_media (
 );
 ```
 
-### 6. Folder Media Table ###
+### 6. Users Folders Table
+This linking table associates users with folders and keeps tabs on the owner with `is_admin`.
+```sql
+CREATE TABLE users_folders (
+    user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
+    folder_id INT REFERENCES folders(folder_id) ON DELETE CASCADE,
+    is_admin BOOLEAN NOT NULL DEFAULT FALSE,
+    PRIMARY KEY (user_id, folder_id)
+);
+```
+
+### 7. Folder Media Table ###
 This linking table connects media with folders.
 ```sql
 CREATE TABLE folder_media (
@@ -82,7 +93,7 @@ CREATE TABLE folder_media (
 );
 ```
 
-### 7. Favourites Table ###
+### 8. Favourites Table ###
 This table tracks the media that users have marked as favourites.
 ```sql
 CREATE TABLE favourite_media (
