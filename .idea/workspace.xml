@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="" />
+    <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/media/main_gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/media/main_gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/components/image_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/image_card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/pages/main_gallery.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,11 +64,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/icons" />
       <recent name="$PROJECT_DIR$/public/assets/js" />
       <recent name="$PROJECT_DIR$/public/assets/js/components" />
       <recent name="$PROJECT_DIR$/public/assets/css/modals" />
       <recent name="$PROJECT_DIR$/public/assets/js/modals" />
-      <recent name="$PROJECT_DIR$/public/assets/icons" />
     </key>
   </component>
   <component name="RunManager">
@@ -124,7 +130,10 @@
       <workItem from="1735324934075" duration="636000" />
       <workItem from="1735344883306" duration="7364000" />
       <workItem from="1735385734944" duration="9447000" />
-      <workItem from="1735432522414" duration="2057000" />
+      <workItem from="1735432522414" duration="3053000" />
+      <workItem from="1735526435292" duration="6686000" />
+      <workItem from="1735542565243" duration="1102000" />
+      <workItem from="1735865824166" duration="391000" />
     </task>
     <servers />
   </component>

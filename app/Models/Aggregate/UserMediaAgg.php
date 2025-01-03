@@ -32,7 +32,11 @@ class UserMediaAgg
     if (isset($filters['order']) && in_array(strtolower($filters['order']), ['asc', 'desc'])) {
       $order = strtoupper($filters['order']);
     } else {
-      $order = 'DESC'; // Default ordering
+      $order = 'DESC'; // default ordering
+    }
+    if (isset($filters['search']) && $filters['search'] !== '') {
+      $conditions[] = "m.media_name ILIKE :search"; // ILIKE is case-insensitive
+      $params[':search'] = "%{$filters['search']}%"; //partial match accepted
     }
 
     // conditions and ordering
@@ -68,6 +72,12 @@ public function getUserMediaCount($userId, array $filters = []) {
     $conditions[] = "m.mime_type LIKE :type";
     $params[':type'] = "{$filters['type']}%";
   }
+
+  if (isset($filters['search']) && $filters['search'] !== '') {
+    $conditions[] = "m.media_name ILIKE :search";
+    $params[':search'] = "%{$filters['search']}%";
+  }
+
   if (!empty($conditions)) {
     $baseQuery .= ' AND ' . implode(' AND ', $conditions);
   }

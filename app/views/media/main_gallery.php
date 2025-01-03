@@ -23,6 +23,7 @@ include base_path("app/views/partials/topnav.php");
   <?php endif; ?>
 
   <?php if ($has_content): ?>
+  <?php include base_path("app/views/partials/search.php"); ?>
 </div>
 <div class="filter-button-container">
   <button id="open-filter">Filter Media</button>
