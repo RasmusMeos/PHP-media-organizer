@@ -37,9 +37,16 @@ body {
 
 #create-folder-form input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #007bff;
   border-radius: 5px;
   font-size: 16px;
+  box-shadow: 0 2px 5px rgb(0, 86, 179, 0.15);
+
+}
+
+#create-folder-form label {
+  color: #007bff;
+  font-weight: bold;
 }
 
 #create-folder-form button {

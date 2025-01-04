@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/assets/css/pages/invalid_result.css">
   <link rel="stylesheet" href="/assets/css/pages/albums.css">
   <link rel="stylesheet" href="/assets/css/components/folder_card.css">
+  <link rel="stylesheet" href="/assets/css/components/folder_dropdown.css">
+
 
 
   <script src="/assets/js/modals/delete.js"></script>
@@ -24,7 +26,7 @@
   <script src="/assets/js/components/fullscreen.js"></script>
   <script src="/assets/js/modals/filter.js"></script>
   <script src="/assets/js/components/folder.js"></script>
-  <script src="/assets/js/components/rename_folder.js"></script>
+  <script src="/assets/js/components/folder_dropdown.js"></script>
 
 
 

@@ -1,0 +1,43 @@
+.dropdown-menu {
+  position: absolute;
+  top: 50%;
+  right: 100%; /* dropdown to the left of the button */
+  transform: translateY(-50%); /* vertically centered relative to the button */
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0, 86, 179, 0.15);
+  list-style: none;
+  padding: 0;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-menu.hidden {
+  display: none;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  border: 1px #007bff;
+}
+
+
+
+.dropdown-menu li button {
+  z-index: 3;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  display: inline-block; 
+}
+
+.dropdown-menu li button:hover {
+  background: #0056b3;
+}
