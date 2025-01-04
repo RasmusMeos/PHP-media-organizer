@@ -136,7 +136,7 @@ _"We gather user stories through various user research methods such as interview
 ### Folders ###
 
 - **FR13:** As a user, I want to create folders to organize my media files into categories.
-- **FR14:** As a user, I want to move media between folders to keep them better organized.
+- **FR14:** As a user, I want to add/remove media to/from folders to keep them better organized.
 - **FR15:** As a user, I want to rename folders to better reflect their purpose.
 - **FR16:** As a user, I want to delete folders I no longer need, with the option to either keep the media accessible or delete the media along with the folder.
 
