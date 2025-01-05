@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cancelBtn = modal.querySelector(".cancel-btn");
   const saveBtn = modal.querySelector(".save-btn");
 
-  // Open edit details modal
   document.querySelectorAll(".edit-folder-btn").forEach(button => {
     button.addEventListener("click", (e) => {
       const folderCard = e.target.closest(".folder-card");
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const folderName = folderCard.querySelector(".folder-title a").textContent.trim();
       const folderDesc = folderCard.querySelector(".folder-description").textContent.trim();
 
-      // Populate modal fields
+      // getting values of folder details
       document.getElementById("folder-id-input").value = folderId;
       document.getElementById("edit-folder-name").value = folderName;
       document.getElementById("edit-folder-description").value = folderDesc;
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Save changes via AJAX
+  // Saving changes via AJAX
   saveBtn.addEventListener("click", () => {
     const folderId = document.getElementById("folder-id-input").value.trim();
     const folderName = document.getElementById("edit-folder-name").value.trim();
@@ -65,11 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  // Closing modal
+  // -- Closing modal actions --
   closeModalBtn.addEventListener("click", () => modal.classList.add("hidden"));
   cancelBtn.addEventListener("click", () => modal.classList.add("hidden"));
 
-  // Close modal on outside click
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.classList.add("hidden");
