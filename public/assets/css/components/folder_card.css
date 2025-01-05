@@ -52,15 +52,15 @@
 
 .dropdown-btn {
   border: none;
-  background-color: #007bff;
+  background: none;
   border-radius: 5px;
-  color: white;
+  color: #007bff;
   padding: 8px 6px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;      /* vertically centered */
   justify-content: center;  /* horizontally centered */
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bolder;
   cursor: pointer;
 }

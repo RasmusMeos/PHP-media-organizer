@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="/assets/css/pages/albums.css">
   <link rel="stylesheet" href="/assets/css/components/folder_card.css">
   <link rel="stylesheet" href="/assets/css/components/folder_dropdown.css">
+  <link rel="stylesheet" href="/assets/css/modals/dropdown_items.css">
+
 
 
 
@@ -27,6 +29,8 @@
   <script src="/assets/js/modals/filter.js"></script>
   <script src="/assets/js/components/folder.js"></script>
   <script src="/assets/js/components/folder_dropdown.js"></script>
+  <script src="/assets/js/modals/dropdown_items.js"></script>
+
 
 
 

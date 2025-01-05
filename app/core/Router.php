@@ -136,7 +136,7 @@ class Router
       $usersFoldersModel = new UsersFolders($db);
       return new $class($foldersModel, $usersFoldersModel);
     }
-    if ($class === 'App\Controllers\Folders\RenameAlbum'){
+    if ($class === 'App\Controllers\Folders\EditAlbum'){
       $config = require base_path('config/config.php');
       $db = new Database($config['db']);
       $foldersModel = new Folders($db);

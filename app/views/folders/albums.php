@@ -41,4 +41,5 @@ include base_path("app/views/partials/error_messages.php");
       <?php endif; ?>
   </div>
 
+<?php include base_path("app/views/modals/dropdown_items.php"); ?>
 <?php include base_path("app/views/partials/footer.php"); ?>

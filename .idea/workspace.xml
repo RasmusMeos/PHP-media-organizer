@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/folder_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/folder_card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Folders/RenameAlbum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folders/EditAlbum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Table/Folders.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Table/Folders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/folders/albums.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/folders/albums.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/folder_dropdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/folder_dropdown.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/components/folder_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/folder_card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/pages/albums.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/pages/albums.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/components/rename_folder.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/components/folder_dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/components/folder_dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/folder_dropdown.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -137,7 +141,9 @@
       <workItem from="1735865824166" duration="9532000" />
       <workItem from="1735877433298" duration="26130000" />
       <workItem from="1735969224942" duration="4236000" />
-      <workItem from="1735975421625" duration="2593000" />
+      <workItem from="1735975421625" duration="15374000" />
+      <workItem from="1736083219529" duration="361000" />
+      <workItem from="1736086830195" duration="4016000" />
     </task>
     <servers />
   </component>
