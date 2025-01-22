@@ -11,20 +11,22 @@
         <?php echo htmlspecialchars($folder['folder_name'], ENT_QUOTES, 'UTF-8'); ?>
       </a>
     </h3>
-    <p class="folder-description">
-      <?php
-      $description = htmlspecialchars($folder['folder_description'], ENT_QUOTES, 'UTF-8');
-      $maxLength = 100; // character limit
-      if (strlen($description) > $maxLength) {
-        echo substr($description, 0, $maxLength) . '...';
-        ?>
-        <button class="see-more">See more</button>
-        <?php
-      } else {
-        echo $description;
-      }
-      ?>
-    </p>
+    <div class="folder-description">
+      <?php $maxLength = 50; //character limit ?>
+      <?php if ($folder['folder_description'] !== null && strlen($folder['folder_description']) > $maxLength): ?>
+      <span class="description-short">
+        <?php echo htmlspecialchars(substr($folder['folder_description'], 0, $maxLength), ENT_QUOTES, 'UTF-8') . '...'; ?>
+      </span>
+      <span class="description-full hidden">
+        <?php echo htmlspecialchars($folder['folder_description'], ENT_QUOTES, 'UTF-8'); ?>
+      </span>
+      <button class="toggle-description">See more</button>
+      <?php else: ?>
+        <span class="description-full">
+        <?php echo $folder['folder_description'] !== null ? htmlspecialchars($folder['folder_description'], ENT_QUOTES, 'UTF-8') : ''; ?>
+        </span>
+      <?php endif; ?>
+    </div>
   </div>
 
   <!-- Actions Section -->

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("edit-album-modal");
-  const closeModalBtn = modal.querySelector(".close-btn");
+  const modalOverlay = document.querySelector(".edit-album-modal-overlay");
+  const modal = modalOverlay.querySelector(".edit-album-modal");
   const cancelBtn = modal.querySelector(".cancel-btn");
   const saveBtn = modal.querySelector(".save-btn");
 
@@ -9,18 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const folderCard = e.target.closest(".folder-card");
       const folderId = folderCard.getAttribute("data-folder-id");
       const folderName = folderCard.querySelector(".folder-title a").textContent.trim();
-      const folderDesc = folderCard.querySelector(".folder-description").textContent.trim();
+      const folderDescElement = folderCard.querySelector(".description-full");
+      const folderDesc = folderDescElement ? folderDescElement.textContent.trim() : "";
 
-      // getting values of folder details
+      // extract values
       document.getElementById("folder-id-input").value = folderId;
       document.getElementById("edit-folder-name").value = folderName;
       document.getElementById("edit-folder-description").value = folderDesc;
 
-      modal.classList.remove("hidden");
+      // Show modal
+      modalOverlay.classList.remove("hidden");
     });
   });
 
-  // Saving changes via AJAX
+
   saveBtn.addEventListener("click", () => {
     const folderId = document.getElementById("folder-id-input").value.trim();
     const folderName = document.getElementById("edit-folder-name").value.trim();
@@ -33,44 +35,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("/edit-folder", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         folder_id: folderId,
         folder_name: folderName,
-        folder_desc: folderDescription || null,
+        folder_desc: folderDescription || '',
       }),
     })
-      .then((response) => {
+      .then(response => {
         if (!response.ok) {
-          return response.json().then((data) => {
+          return response.json().then(data => {
             throw new Error(data.error || "Failed to save changes.");
           });
         }
         return response.json();
       })
       .then(() => {
-       // alert("Changes saved successfully.");
-        modal.classList.add("hidden");
-        // Updating the UI to reflect changes
+        modalOverlay.classList.add("hidden"); // Hide modal
+
+        // updating UI
         const folderCard = document.querySelector(`.folder-card[data-folder-id="${folderId}"]`);
         folderCard.querySelector(".folder-title a").textContent = folderName;
-        folderCard.querySelector(".folder-description").textContent = folderDescription || "";
+
+        const folderDescriptionContainer = folderCard.querySelector(".folder-description");
+        folderDescriptionContainer.innerHTML = ''; // clearing existing content
+
+        const maxLength = 50;
+
+        if (folderDescription.length > maxLength) {
+          // short description
+          const shortDescription = document.createElement("span");
+          shortDescription.className = "description-short";
+          shortDescription.textContent = folderDescription.substring(0, maxLength) + "... ";
+
+          // full description (hidden by default)
+          const fullDescription = document.createElement("span");
+          fullDescription.className = "description-full hidden";
+          fullDescription.textContent = folderDescription;
+
+          // toggling button
+          const toggleButton = document.createElement("button");
+          toggleButton.className = "toggle-description";
+          toggleButton.textContent = "See more";
+          toggleButton.addEventListener("click", () => toggleDescription(toggleButton));
+
+          folderDescriptionContainer.appendChild(shortDescription);
+          folderDescriptionContainer.appendChild(fullDescription);
+          folderDescriptionContainer.appendChild(toggleButton);
+        } else {
+          const fullDescription = document.createElement("span");
+          fullDescription.className = "description-full";
+          fullDescription.textContent = folderDescription;
+          folderDescriptionContainer.appendChild(fullDescription);
+        }
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error saving changes:", error);
         alert(error.message);
       });
   });
 
-  // -- Closing modal actions --
-  closeModalBtn.addEventListener("click", () => modal.classList.add("hidden"));
-  cancelBtn.addEventListener("click", () => modal.classList.add("hidden"));
-
+  // Closing modal actions
+  cancelBtn.addEventListener("click", () => modalOverlay.classList.add("hidden"));
   window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
+    if (e.target === modalOverlay) {
+      modalOverlay.classList.add("hidden");
     }
   });
+
+  // toggling description visibility
+  function toggleDescription(button) {
+    const folderCard = button.closest(".folder-card");
+    const shortDesc = folderCard.querySelector(".description-short");
+    const fullDesc = folderCard.querySelector(".description-full");
+
+    if (fullDesc.classList.contains("hidden")) {
+      shortDesc.classList.add("hidden");
+      fullDesc.classList.remove("hidden");
+      button.textContent = "See less";
+    } else {
+      shortDesc.classList.remove("hidden");
+      fullDesc.classList.add("hidden");
+      button.textContent = "See more";
+    }
+  }
 });

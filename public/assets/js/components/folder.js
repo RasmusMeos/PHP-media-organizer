@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".toggle-description-btn").forEach((btn) => {
+  document.querySelectorAll(".toggle-description").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const description = btn.closest(".folder-wrapper").querySelector(".folder-description");
-      description.classList.toggle("hidden");
-      btn.innerHTML = description.classList.contains("hidden") ? "&#9660" : "&#9650";
+      const descriptionShort = btn.closest(".folder-description").querySelector(".description-short");
+      const descriptionFull = btn.closest(".folder-description").querySelector(".description-full");
+
+      // Toggle visibility
+      descriptionShort.classList.toggle("hidden");
+      descriptionFull.classList.toggle("hidden");
+
+      // Update button text
+      btn.textContent = descriptionFull.classList.contains("hidden") ? "See more" : "See less";
     });
   });
 });
