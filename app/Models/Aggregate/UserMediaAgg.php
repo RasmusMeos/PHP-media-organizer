@@ -35,8 +35,8 @@ class UserMediaAgg
       $order = 'DESC'; // default ordering
     }
     if (isset($filters['search']) && $filters['search'] !== '') {
-      $conditions[] = "m.media_name ILIKE :search"; // ILIKE is case-insensitive
-      $params[':search'] = "%{$filters['search']}%"; //partial match accepted
+      $conditions[] = "LOWER(m.media_name) LIKE :search"; // ILIKE is case-insensitive - postgresql
+      $params[':search'] = strtolower("%{$filters['search']}%"); //partial match accepted
     }
 
     // conditions and ordering
@@ -74,8 +74,8 @@ public function getUserMediaCount($userId, array $filters = []) {
   }
 
   if (isset($filters['search']) && $filters['search'] !== '') {
-    $conditions[] = "m.media_name ILIKE :search";
-    $params[':search'] = "%{$filters['search']}%";
+    $conditions[] = "LOWER(m.media_name) LIKE :search";
+    $params[':search'] = strtolower("%{$filters['search']}%");
   }
 
   if (!empty($conditions)) {

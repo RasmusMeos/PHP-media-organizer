@@ -49,6 +49,7 @@ class EditAlbum extends BaseController
 
     // ownership verification
     $user = $this->userModel->findByUsername($userName);
+    error_log(print_r($user, true));
     if (!$user || $user['user_id'] !== $_SESSION['user_id']) {
       http_response_code(403); // Forbidden
       echo json_encode(["error" => "You do not have permission to edit the details for this folder."]);

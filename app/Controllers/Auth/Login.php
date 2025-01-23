@@ -34,7 +34,7 @@ class Login extends BaseController {
         $user = $this->userModel->findByUsername($username);
 
         if ($user && password_verify($password, $user['pwd'])) {
-          $_SESSION['user_id'] = $user['user_id'];
+          $_SESSION['user_id'] = (int)$user['user_id'];
           $_SESSION['username'] = $user['username'];
           $this->redirect("/");
         } else {

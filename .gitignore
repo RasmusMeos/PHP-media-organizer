@@ -1,2 +1,3 @@
 uploads/images/*
 !uploads/images/.gitkeep
+sqlite/database.sqlite

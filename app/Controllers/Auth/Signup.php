@@ -60,7 +60,7 @@ class Signup extends BaseController
         $result = $this->userModel->createUser($username, $email, $hashedPassword);
 
         if ($result) {
-          $_SESSION['user_id'] = $this->userModel->getLastInsertedUserId();
+          $_SESSION['user_id'] = (int)$this->userModel->getLastInsertedUserId();
           $_SESSION['username'] = $username;
 
           $this->redirect('/');
