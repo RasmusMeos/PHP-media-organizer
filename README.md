@@ -30,7 +30,7 @@ CREATE TABLE media (
     mime_type VARCHAR(50) NOT NULL,
     file_size BIGINT NOT NULL,
     file_name VARCHAR(255) NOT NULL,
-    download_url VARCHAR(255), -- for future drag-and-drop functionality
+    download_url VARCHAR(255),
     media_description TEXT,
     taken_date TIMESTAMP,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
