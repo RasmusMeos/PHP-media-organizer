@@ -1,0 +1,73 @@
+.folder-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgb(0, 86, 179, 0.15);
+}
+
+.folder-icon img {
+  height: 100%;
+  max-width: 50px;
+  object-fit: contain;
+}
+
+.folder-content {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.folder-title a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.folder-title a:hover {
+  text-decoration: underline;
+}
+
+.folder-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.folder-description .toggle-description {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.description-short.hidden {
+  display: none;
+}
+.description-full.hidden {
+  display: none;
+}
+
+.folder-actions {
+  position: relative;
+}
+
+.dropdown-btn {
+  border: none;
+  background: none;
+  border-radius: 5px;
+  color: #007bff;
+  padding: 8px 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;      /* vertically centered */
+  justify-content: center;  /* horizontally centered */
+  font-size: 28px;
+  font-weight: bolder;
+  cursor: pointer;
+}

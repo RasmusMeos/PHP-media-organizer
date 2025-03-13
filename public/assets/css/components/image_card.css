@@ -1,0 +1,111 @@
+.image-wrapper {
+  max-width: 33%;
+  min-width: 300px;
+  margin: 15px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #deeaff;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.image-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.image-container {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.image-thumbnail {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.image-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.image-actions a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.image-actions img {
+  width: 100%;
+  height: 100%;
+}
+
+.edit-icon img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.delete-icon {
+  width: 32px;
+  height: 32px;
+}
+.delete-icon img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  horiz-align: center;
+}
+.favourite-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.favourite-icon img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  horiz-align: center;
+}
+
+.image-name-input {
+  display: none;
+}
+
+.image-title.editing .image-name {
+  display: none;
+}
+
+.image-title.editing .image-name-input {
+  display: inline-block;
+}
+
+/* transition to fullscreen styling */
+.fullscreen-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 25%;
+  padding: 5px;
+  display: none; /* only shown on hover */
+  cursor: pointer;
+  z-index: 1;
+}
+
+.fullscreen-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.image-container:hover .fullscreen-icon {
+  display: block;
+}

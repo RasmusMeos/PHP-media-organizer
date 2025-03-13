@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Folders/EditAlbum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folders/EditAlbum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Controllers/Media/UploadImage.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/core/Main.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/public/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2kyvgoCNKaEJuYT0GIPIEp4f7oC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/icons" />
+      <recent name="$PROJECT_DIR$/public/assets/js" />
+      <recent name="$PROJECT_DIR$/public/assets/js/components" />
+      <recent name="$PROJECT_DIR$/public/assets/css/modals" />
+      <recent name="$PROJECT_DIR$/public/assets/js/modals" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SignupController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/app/Controllers/SignupController.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="" />
+      <created>1724268744643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724268744643</updated>
+      <workItem from="1724268745691" duration="16958000" />
+      <workItem from="1724335461564" duration="6565000" />
+      <workItem from="1724409836977" duration="12862000" />
+      <workItem from="1724424953451" duration="3900000" />
+      <workItem from="1724432481431" duration="6415000" />
+      <workItem from="1728218454754" duration="1964000" />
+      <workItem from="1728744783631" duration="13861000" />
+      <workItem from="1728781477267" duration="657000" />
+      <workItem from="1728863587342" duration="115000" />
+      <workItem from="1728863711472" duration="213000" />
+      <workItem from="1728863942942" duration="154000" />
+      <workItem from="1728864100525" duration="52000" />
+      <workItem from="1728864179191" duration="990000" />
+      <workItem from="1729694740747" duration="4112000" />
+      <workItem from="1729708780853" duration="20018000" />
+      <workItem from="1729874030669" duration="6867000" />
+      <workItem from="1732206804073" duration="21276000" />
+      <workItem from="1732279161939" duration="7276000" />
+      <workItem from="1732725434201" duration="133000" />
+      <workItem from="1732753008835" duration="170000" />
+      <workItem from="1732894069209" duration="7947000" />
+      <workItem from="1732914558599" duration="669000" />
+      <workItem from="1733008895682" duration="17633000" />
+      <workItem from="1733098457980" duration="13094000" />
+      <workItem from="1733153073197" duration="1081000" />
+      <workItem from="1733166802571" duration="3750000" />
+      <workItem from="1733328616014" duration="28527000" />
+      <workItem from="1733430345616" duration="45419000" />
+      <workItem from="1733500215720" duration="2189000" />
+      <workItem from="1733503624435" duration="1000000" />
+      <workItem from="1733578881892" duration="12683000" />
+      <workItem from="1733787333668" duration="16706000" />
+      <workItem from="1733882071360" duration="32650000" />
+      <workItem from="1735054688441" duration="3276000" />
+      <workItem from="1735242758626" duration="1172000" />
+      <workItem from="1735324934075" duration="636000" />
+      <workItem from="1735344883306" duration="7364000" />
+      <workItem from="1735385734944" duration="9447000" />
+      <workItem from="1735432522414" duration="3053000" />
+      <workItem from="1735526435292" duration="6686000" />
+      <workItem from="1735542565243" duration="1102000" />
+      <workItem from="1735865824166" duration="9532000" />
+      <workItem from="1735877433298" duration="26130000" />
+      <workItem from="1735969224942" duration="4236000" />
+      <workItem from="1735975421625" duration="15374000" />
+      <workItem from="1736083219529" duration="361000" />
+      <workItem from="1736086830195" duration="10283000" />
+      <workItem from="1737569134791" duration="15579000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Controllers/Auth/Profile.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

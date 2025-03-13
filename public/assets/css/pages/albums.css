@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.folders-container h2 {
+  color: #0056b3;
+}
+
+.create-folder,
+.folder-list {
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ccc; /* Add visible lines */
+  background-color: #f9f9f9;
+}
+
+.folders-container {
+  display: flex;
+  height: 100vh; /* sections occupy the full page height */
+}
+
+.create-folder {
+  flex: 1; /* half of the width */
+  border-right: 1px solid #ccc; /* dividing line between sections */
+}
+
+.folder-list {
+  flex: 1; /* other half of the width */
+}
+
+#create-folder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* spacing between inputs */
+}
+
+#create-folder-form input {
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgb(0, 86, 179, 0.15);
+
+}
+
+#create-folder-form label {
+  color: #007bff;
+  font-weight: bold;
+}
+
+#create-folder-form button {
+  padding: 10px 10px;
+  background-color: #007bff;
+  width: 125px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#create-folder-form button:hover {
+  background-color: #0056b3;
+}
+
+/*
+#folders-list {
+  list-style: none;
+  padding: 0;
+}
+
+#folders-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+
+#folders-list button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#folders-list button:hover {
+  background-color: #0056b3;
+} */
+
+.success-message {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
