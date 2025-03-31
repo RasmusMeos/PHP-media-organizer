@@ -13,28 +13,29 @@ class Router
 {
   private $routes = [];
 
-  private function add($method, $uri, $controller)
+  private function add($method, $uri, $controller, $middleware = null)
   {
     $this->routes[] = [
       'uri' => $uri,
       'controller' => $controller,
-      'method' => $method
+      'method' => $method,
+      'middleware' => $middleware
     ];
   }
 
-  public function get($uri, $controller)
+  public function get($uri, $controller, $middleware = null): void
   {
-    $this->add('GET', $uri, $controller);
+    $this->add('GET', $uri, $controller, $middleware);
   }
 
-  public function post($uri, $controller)
+  public function post($uri, $controller, $middleware = null): void
   {
-    $this->add('POST', $uri, $controller);
+    $this->add('POST', $uri, $controller, $middleware);
   }
 
-  public function delete($uri, $controller)
+  public function delete($uri, $controller, $middleware = null): void
   {
-    $this->add('DELETE', $uri, $controller);
+    $this->add('DELETE', $uri, $controller, $middleware);
   }
 
 
@@ -43,6 +44,14 @@ class Router
   {
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
+        //middleware execution first
+        if (isset($route['middleware'])) {
+          $middlewareClass = $route['middleware'];
+          $middleware = new $middlewareClass();
+          if (!$middleware->handle($query)) {
+            return;
+          }
+        }
         $controller = $route['controller'];
 
         if (is_array($controller)) {
