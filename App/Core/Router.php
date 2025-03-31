@@ -13,7 +13,7 @@ class Router
 {
   private $routes = [];
 
-  private function add($method, $uri, $controller, $middleware = null)
+  private function add($method, $uri, $controller, $middleware = null): void
   {
     $this->routes[] = [
       'uri' => $uri,
