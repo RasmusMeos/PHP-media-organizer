@@ -1,0 +1,134 @@
+[
+  {
+    "method": "GET",
+    "uri": "/",
+    "controller": "App\\Core\\Main",
+    "action": "index"
+  },
+  {
+    "method": "GET",
+    "uri": "/login",
+    "controller": "App\\Controllers\\Auth\\Login",
+    "action": "displayLoginForm",
+    "middleware": "App\\Core\\Middleware\\GuestMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/login",
+    "controller": "App\\Controllers\\Auth\\Login",
+    "action": "login",
+    "middleware": "App\\Core\\Middleware\\GuestMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/logout",
+    "controller": "App\\Controllers\\Auth\\Logout",
+    "action": "logout",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/upload",
+    "controller": "App\\Controllers\\Media\\UploadImage",
+    "action": "displayUploadForm",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/upload",
+    "controller": "App\\Controllers\\Media\\UploadImage",
+    "action": "upload",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/signup",
+    "controller": "App\\Controllers\\Auth\\Signup",
+    "action": "displaySignupForm",
+    "middleware": "App\\Core\\Middleware\\GuestMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/signup",
+    "controller": "App\\Controllers\\Auth\\Signup",
+    "action": "signup",
+    "middleware": "App\\Core\\Middleware\\GuestMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/change-password",
+    "controller": "App\\Controllers\\Auth\\ChangePassword",
+    "action": "displayChangePasswordForm",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/change-password",
+    "controller": "App\\Controllers\\Auth\\ChangePassword",
+    "action": "changePassword",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/profile",
+    "controller": "App\\Controllers\\Auth\\Profile",
+    "action": "profile",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/profile",
+    "controller": "App\\Controllers\\Auth\\Profile",
+    "action": "changeScreenName",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "DELETE",
+    "uri": "/delete-image",
+    "controller": "App\\Controllers\\Media\\DeleteImage",
+    "action": "deleteImage",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/favourite-image",
+    "controller": "App\\Controllers\\Media\\FavouriteImage",
+    "action": "toggleFavourite",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/favourites",
+    "controller": "App\\Controllers\\Favourites\\Favourites",
+    "action": "index",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/rename-media",
+    "controller": "App\\Controllers\\Media\\RenameMedia",
+    "action": "rename",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "GET",
+    "uri": "/albums",
+    "controller": "App\\Controllers\\Folders\\Albums",
+    "action": "index",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/create-folder",
+    "controller": "App\\Controllers\\Folders\\CreateAlbum",
+    "action": "createFolder",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  },
+  {
+    "method": "POST",
+    "uri": "/edit-folder",
+    "controller": "App\\Controllers\\Folders\\EditAlbum",
+    "action": "edit",
+    "middleware": "App\\Core\\Middleware\\AuthMiddleware"
+  }
+]
