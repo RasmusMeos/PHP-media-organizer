@@ -37,6 +37,11 @@ class Router
 
   public function route($uri, $method, $query = [])
   {
+    // we don't permit logging out via GET requests
+    if ($uri === "/logout" && $method !== "POST"){
+      header("Location: /");
+      exit();
+    }
     foreach ($this->routes as $route) {
       if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
         //middleware execution first
@@ -44,7 +49,7 @@ class Router
           $middlewareClass = $route['middleware'];
           $middleware = new $middlewareClass();
           if (!$middleware->handle($query)) {
-            return;
+            exit();
           }
         }
         $controller = $route['controller'];

@@ -20,7 +20,7 @@
     "middleware": "App\\Core\\Middleware\\GuestMiddleware"
   },
   {
-    "method": "GET",
+    "method": "POST",
     "uri": "/logout",
     "controller": "App\\Controllers\\Auth\\Logout",
     "action": "logout",
