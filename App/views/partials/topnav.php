@@ -8,7 +8,11 @@
         <li><a href="/upload">Upload</a> </li>
         <li><a href="/profile">Profile</a></li>
         <li><a href="/change-password">Change Password</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li>
+          <form action="/logout" method="POST" style="display:inline;">
+            <button type="submit" class="logout-btn">Logout</button>
+          </form>
+        </li>
       <?php else: ?>
         <li><a href="/signup">Sign Up</a></li>
         <li><a href="/login">Login</a></li>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
         </div>
     `;
-  document.body.appendChild(fullscreenOverlay); //add a node to the end
+  document.body.appendChild(fullscreenOverlay);
 
   const overlayImage = fullscreenOverlay.querySelector(".fullscreen-image");
   const exitButton = fullscreenOverlay.querySelector(".exit-fullscreen-icon");
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const imageUrl = imageElement.getAttribute("src");
 
       overlayImage.src = imageUrl;
-      fullscreenOverlay.classList.add("show"); // display the fullscreen image
+      fullscreenOverlay.classList.add("show");
 
     });
   });
