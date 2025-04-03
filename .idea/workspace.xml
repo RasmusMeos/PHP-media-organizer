@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="244dfd81-8ed0-48d6-97d8-7f111f92ddf3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Auth/Signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Folders/EditAlbum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Folders/EditAlbum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aggregate/UserMediaAgg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/components/fullscreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/components/fullscreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/components/fullscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/components/fullscreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +49,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -148,6 +143,8 @@
       <workItem from="1736083219529" duration="361000" />
       <workItem from="1736086830195" duration="10283000" />
       <workItem from="1737569134791" duration="15579000" />
+      <workItem from="1743456742205" duration="114000" />
+      <workItem from="1743547517086" duration="4055000" />
     </task>
     <servers />
   </component>
